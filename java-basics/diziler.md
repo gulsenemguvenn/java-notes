@@ -50,7 +50,7 @@ int[] sayilar = {1, 2, 3, 4, 5}; // Diziye değerler atanarak tanımlama
 Bir dizinin elemanlarına erişmek için dizinin **indeksini** kullanırız.  
 Diziler 0'dan başlayan indeks numaralarına sahiptir.
 
-![alt text]images/(image-71.png)
+![alt text](images/image-71.png)
 
 ---
 
