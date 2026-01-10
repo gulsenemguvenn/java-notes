@@ -1,7 +1,8 @@
 # 🧭 Koşul Yapıları
 
 Karar mekanizmaları ve döngüler uygulama içindeki akışı kontrol etmek için kullanılır.  
-Kimi zaman bazı koşullar altında bir kod parçasının çalıştırılmasını isterken kimi zaman da o koşulun gerçek olmaması durumunda başka kod parçalarının çalıştırılmasını isteriz.  
+Kimi zaman bazı koşullar altında bir kod parçasının çalıştırılmasını isterken, kimi zaman da o koşulun gerçek olmaması durumunda başka kod parçalarının çalıştırılmasını isteriz.  
+
 İşte bu durumda yardımımıza **if**, **if-else** ve **switch** ifadeleri yetişir.
 
 Bazen ise bir kod parçasının defalarca çalıştırılması gerekir, bu durumda ise **for** ve **while** döngü ifadeleri istediğimiz kadar tekrarlı kod çalıştırmamızı sağlar.
@@ -22,25 +23,29 @@ Enter your name : Huseyin
 Enter your age : 33
 Welcome Huseyin 33
 
-Örnekte Scanner sınıfından bir obje yarattık (Obje ve sınıf kavramlarına daha sonra değineceğiz),
-Scanner sınıfına klavyeden girilen değerleri okuması için
-System.in
- input stream objesini verdik.
+Örnekte Scanner sınıfından bir obje yarattık
+(Obje ve sınıf kavramlarına daha sonra değineceğiz).
 
-scanner objesinin next() metodu consoldan girilen kelimeyi okur ve String tipinde geri döner,
-nextInt() metodu ise ilk kelimeyi okur ve int tipinde geri döner.
+Scanner sınıfına, klavyeden girilen değerleri okuması için
+System.in input stream objesini verdik.
+
+scanner.next() → konsoldan girilen kelimeyi okur ve String döner
+
+scanner.nextInt() → girilen sayıyı okur ve int döner
 
 Böylece kullanıcı ile etkileşim kurmuş oluruz.
 
+---
+
 ✅ if-else İfadesi
 
+✅ if – else İfadesi
+
 if ifadesi belirli bir koşul altında program akışının hangi yöne devam edeceğini belirler.
-Belirtilen şart doğru ise, kod bloğu çalıştırılır.
-if ifadesi içinde yer alan koşul true dönmesi durumunda if bloğu işletilir.
 
-Eğer şart doğruysa, if bloğu çalıştırılır.
+Belirtilen şart true ise, if bloğu çalıştırılır
 
-Aksi takdirde, else bloğu çalıştırılır.
+Aksi takdirde, else bloğu çalıştırılır
 
 ![alt text](images/image-108.png)
 
@@ -53,6 +58,8 @@ Aksi takdirde, else bloğu çalıştırılır.
 Enter your age : 11
 It's too early to drive !!!
 Your availability for driving licence : false
+
+---
 
 🔁 else İfadesi
 
@@ -68,7 +75,8 @@ Good evening.
 
 🔗 if - else if İfadesi
 
-if-else-if ifadesi ise if koşulu gerçekleşmediği taktirde ikinci bir koşulu test etmeye yarar.
+if-else-if ifadesi, if koşulu gerçekleşmediği taktirde
+ikinci bir koşulu test etmeye yarar.
 Örneğin;
 
 ![alt text](images/image-112.png)
@@ -84,6 +92,7 @@ ve bize istediğimiz kadar farklı koşulu test etme imkanı sunar.
 
 Fakat if-else-if ifadesi ne kadar çok kullanılırsa kodun okunabilirliği o kadar azalır.
 
+---
 
 🔀 switch İfadesi
 
@@ -137,6 +146,8 @@ Number of Days = 29
 
 Bu örnekte switch ifadesinde test edilen değişkenin hangi case durumu ile eşleştiyse o case'den itibaren altındaki tüm caselerin break ifadesi ile karşılaşıncaya kadar işletildiğine dikkat edelim.
 
+---
+
 ❓ Ternary Operator (Koşul Operatörü)
 
 if-else yapısının kısa bir versiyonudur.
@@ -144,11 +155,13 @@ Koşul doğruysa bir değer, yanlışsa başka bir değer döndürür.
 
 Kullanım:  sonuç = (koşul) ? değer1 : değer2;
 
+---
+
 📌 Koşul Yapıları ile Önemli Noktalar
 
 Koşul ifadeleri (if, switch) genellikle boolean değer döndüren bir ifadenin sonucuna göre değerlendirilir.
 
-if / else ve switch arasındaki farklar:
+📌 if / else ve switch arasındaki farklar:
 
 if ile daha karmaşık koşul ifadeleri yazılabilirken,
 switch yalnızca belirli veri türleri ile

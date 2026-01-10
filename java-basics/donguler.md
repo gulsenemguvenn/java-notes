@@ -11,13 +11,18 @@ ya da belli bir koşul gerçekleştiği sürece çalıştırabileceğimiz döng�
 Bu döngü tipi bir kod bloğunun belli bir sayıda çalıştırılması gerektiği bilindiği durumlarda kullanılır.  
 Genellikle bir değişkenin başlangıç değeri, bitiş koşulu ve her iterasyonda nasıl değişeceği belirtilir.  
 
-Genel yapısı aşağıdaki gibidir:
+### Genel Yapı
 
 ![alt text](images/image-116.png)
 
 Initialization ifadesi döngü kontrol değişkeninin tanımlandığı ve ilk değerini aldığı kısımdır.  
 Condition ifadesi döngünün hangi şartlar altında devam edeceğinin belirlendiği kısımdır.  
 Iteration ifadesi ise döngü kontrol ifadesinin her bir döngü adımında nasıl değişeceğinin belirlendiği kısımdır.
+
+
+---
+
+### Örnek 
 
 ![alt text](images/image-117.png)
 
@@ -34,9 +39,13 @@ Yukarıdaki örnekte int tipinde i değeri 0 olarak tanımlanmış
 ve döngünün i 5den küçük olduğu sürece tekrarlanması istenmiş.
 Döngünün her adımı tamamlanınca i değeri 1 artırılmıştır.
 
+---
+
+### Örnek 
+
 ![alt text](images/image-118.png)
 
-Output :
+### 📤 Output
 
     i and j :0 10
     i and j :1 9
@@ -48,9 +57,13 @@ Bu örnekte ise i ve j olmak üzere iki farklı değer kullanılmıştır.
 Her döngü adımında i değeri 1 artırılırken j değeri 1 azaltılmış
 ve i j'den küçük olduğu sürece döngünün tekrarlanması sağlanmıştır.
 
+---
+
+### Örnek 
+
 ![alt text](images/image-119.png)
 
-Output :
+### 📤 Output
 
     i :0
     i :1
@@ -62,7 +75,7 @@ Bu örnekte ise i değeri döngü dışında tanımlanmış ve döngünün i de�
 
 Not : for döngüsünün farklı bir versiyonu olan foreach döngüsüne daha sonra array konusunu işlediğimiz zaman değineceğiz.
 
-🔹 While Döngüsü
+##🔹 While Döngüsü
 
 Koşul doğru olduğu sürece döngü çalışmaya devam eder.
 Koşul döngü başlamadan önce kontrol edilir.
@@ -83,7 +96,7 @@ while döngüsü çalışmaya condition ifadesinin sonucunu kontrol ederek başl
 Her adımda condition kontrol edilir.
 true dönerse döngü içindeki kod çalıştırılır, false dönerse döngü son bulur.
 
-🔹 Do-While Döngüsü
+##🔹 Do-While Döngüsü
 
 while döngüsünün özel bir şeklidir.
 Önce do bloğu çalıştırılır, ardından while koşulu kontrol edilir.
@@ -95,6 +108,8 @@ Bu nedenle do-while döngüsünde döngünün en az bir kere çalışması garan
 📤 Output
 
 Iteration: 6
+
+---
 
 ⛔ break ve continue İfadeleri
 
@@ -144,7 +159,9 @@ Output :
 Bu örnekte 0'dan 99'a kadar sayılmış
 ve sadece 10’un katları konsola yazdırılmıştır.
 
-🔁 İç İçe Döngüler
+---
+
+ 🔁 İç İçe Döngüler
 
 Bu bölümde kullanıcıdan alınan yükseklik bilgisine göre
 ekrana bir piramid çizdirilmesi beklenmektedir.
@@ -153,18 +170,20 @@ ekrana bir piramid çizdirilmesi beklenmektedir.
 
 ![alt text](images/image-127.png)
 
-*🔹Do-While Döngüsü
+##🔹Do-While Döngüsü
 
 do-while döngüsü, while döngüsüne benzer, ancak koşul döngü tamamlandıktan sonra kontrol edilir. Bu yüzden, döngü en az bir kez çalışır.
 
 ![alt text](images/image-128.png)
 
-*🔹 for-each Döngüsü (Enhanced for loop)
+##🔹 for-each Döngüsü (Enhanced for loop)
 
 Dizi veya koleksiyonlar üzerinde döngü yapmayı kolaylaştıran bir yapıdır.
 Özellikle diziler ve koleksiyonlar ile çalışırken kullanılır.
 
  ![alt text](images/image-129.png)
+
+ ---
 
  🧠 Döngü Kontrol Yapıları
 
@@ -184,7 +203,9 @@ Döngüdeki bir iterasyonu atlamak için kullanılır.
 
 ![alt text](images/image-131.png)
 
-📝 Özetle Döngülerin Kullanımı
+---
+
+## 📝 Özetle Döngülerin Kullanımı
 
 for döngüsü: Belirli sayıda iterasyon gerektiren durumlar için kullanılır.
 
