@@ -51,24 +51,24 @@ public String toString() {
 
 ---
 
-## 3.2 Meta-Annotations
+3.2 Meta-Annotations
 
 Annotation’ların nasıl kullanılacağını belirler.
 
-### 🔹 @Target
+🔹 @Target
 
 Annotation’ın nerede kullanılacağını belirtir
 (class, method, field vb.)
 
-### 🔹 @Retention
+🔹 @Retention
 
 Annotation’ın ne zamana kadar geçerli olduğunu belirtir.
 
-### 🔹 @Documented
+🔹 @Documented
 
 Javadoc içerisine eklenmesini sağlar.
 
-### 🔹 @Inherited
+🔹 @Inherited
 
 Alt sınıflara miras kalmasını sağlar.
 
@@ -77,23 +77,23 @@ Alt sınıflara miras kalmasını sağlar.
 
 ---
 
-## ⏱ 4. Retention Policy
+⏱ 4. Retention Policy
 
 Annotation’ın yaşam süresini belirler.
 
-### 🔸 SOURCE
+🔸 SOURCE
 
 Sadece yazım sırasında vardır
 
 Compile sonrası silinir
 
-### 🔸 CLASS
+🔸 CLASS
 
 Compile edilir
 
 Runtime’da erişilemez
 
-### 🔸 RUNTIME
+🔸 RUNTIME
 
 Çalışma zamanında erişilebilir
 
@@ -101,7 +101,7 @@ Runtime’da erişilemez
 
 ---
 
-## 🛠 5. Custom Annotation (Özel Annotation)
+🛠 5. Custom Annotation (Özel Annotation)
 
 Geliştirici kendi annotation’ını yazabilir.
 
@@ -113,51 +113,46 @@ Geliştirici kendi annotation’ını yazabilir.
 
 ![alt text](images/image-4.png)
 
----
 
-## 🌱 6. Spring Framework’te Annotation Kullanımı
+🌱 6. Spring Framework’te Annotation Kullanımı
 
 Spring, annotation tabanlı çalışır.
 
-## 🔹 Sık Kullanılan Annotation’lar
+🔹 Sık Kullanılan Annotation’lar
 
-### @Component
+@Component
 Spring tarafından yönetilen bir bean tanımlar.
 
-### @Service
+@Service
 İş mantığı içeren sınıflar için kullanılır.
 
-### @Repository
+@Repository
 Veritabanı katmanını temsil eder.
 
-### @Controller
+@Controller
 MVC controller sınıflarında kullanılır.
 
-### @RestController
+@RestController
 REST API geliştirmek için kullanılır.
 
-### @Autowired
+@Autowired
 Dependency Injection sağlar.
 
-### @GetMapping
+@GetMapping
 GET isteklerini karşılar.
 
 📌 Örnek
 
 ![alt text](images/image-5.png)
 
----
-
-## ⚠️ 7. Sık Yapılan Hatalar
+⚠️ 7. Sık Yapılan Hatalar
 
 ❌ Annotation ile iş mantığı yazmak
 ❌ Yanlış RetentionPolicy seçmek
 ❌ Her yere @Autowired eklemek
 ❌ Annotation’ın ne zaman okunduğunu bilmemek
 
----
-
-## ✅ 8. Özet
+✅ 8. Özet
 
 Annotation’lar, Java ve Spring dünyasında
 konfigürasyonu sadeleştiren ve kodu okunabilir hale getiren yapılardır.
