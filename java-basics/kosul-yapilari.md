@@ -1,0 +1,162 @@
+# 🧭 Koşul Yapıları
+
+Karar mekanizmaları ve döngüler uygulama içindeki akışı kontrol etmek için kullanılır.  
+Kimi zaman bazı koşullar altında bir kod parçasının çalıştırılmasını isterken kimi zaman da o koşulun gerçek olmaması durumunda başka kod parçalarının çalıştırılmasını isteriz.  
+İşte bu durumda yardımımıza **if**, **if-else** ve **switch** ifadeleri yetişir.
+
+Bazen ise bir kod parçasının defalarca çalıştırılması gerekir, bu durumda ise **for** ve **while** döngü ifadeleri istediğimiz kadar tekrarlı kod çalıştırmamızı sağlar.
+
+---
+
+## 🧾 Konsoldan Scanner Yardımıyla Input Alma
+
+Karar mekanizmaları ve döngü ifadeleri örneklerini zenginleştirmek için konsoldan değer okuma işleminin **Scanner** sınıfı ile nasıl yapıldığına bakalım.
+
+![alt text](images/image-107.png)
+
+### 📤 Output
+
+```text
+Enter your name : Huseyin
+
+Enter your age : 33
+Welcome Huseyin 33
+
+Örnekte Scanner sınıfından bir obje yarattık (Obje ve sınıf kavramlarına daha sonra değineceğiz),
+Scanner sınıfına klavyeden girilen değerleri okuması için
+System.in
+ input stream objesini verdik.
+
+scanner objesinin next() metodu consoldan girilen kelimeyi okur ve String tipinde geri döner,
+nextInt() metodu ise ilk kelimeyi okur ve int tipinde geri döner.
+
+Böylece kullanıcı ile etkileşim kurmuş oluruz.
+
+✅ if-else İfadesi
+
+if ifadesi belirli bir koşul altında program akışının hangi yöne devam edeceğini belirler.
+Belirtilen şart doğru ise, kod bloğu çalıştırılır.
+if ifadesi içinde yer alan koşul true dönmesi durumunda if bloğu işletilir.
+
+Eğer şart doğruysa, if bloğu çalıştırılır.
+
+Aksi takdirde, else bloğu çalıştırılır.
+
+![alt text](images/image-108.png)
+
+![alt text](images/image-109.png)
+
+![alt text](images/image-110.png)
+
+📤 Output
+
+Enter your age : 11
+It's too early to drive !!!
+Your availability for driving licence : false
+
+🔁 else İfadesi
+
+else ifadesi ise if koşulu gerçekleşmemesi durumda,
+yani if ifadesi içinde yer alan koşul false dönmesi durumunda,
+program akışının gideceği yönü belirlemeye yarar.
+
+![alt text](images/image-111.png)
+
+📤 Output
+What is the time : 19
+Good evening.
+
+🔗 if - else if İfadesi
+
+if-else-if ifadesi ise if koşulu gerçekleşmediği taktirde ikinci bir koşulu test etmeye yarar.
+Örneğin;
+
+![alt text](images/image-112.png)
+
+📤 Output
+
+What is the temperature today : 23
+It's cool.
+
+İstediğimiz kadar if-else-if ifadesini zincirleme kullanabiliriz,
+if-else-if ifadeleri yukarıdan aşağıya doğru teker teker çalıştırılır
+ve bize istediğimiz kadar farklı koşulu test etme imkanı sunar.
+
+Fakat if-else-if ifadesi ne kadar çok kullanılırsa kodun okunabilirliği o kadar azalır.
+
+
+🔀 switch İfadesi
+
+Birden fazla koşulu kontrol etmek için kullanılır,
+ancak daha fazla alternatif durumu kontrol etmek için switch yapısı kullanılır.
+
+switch ifadenin sonucu birden fazla case ile karşılaştırılır.
+
+![alt text](images/image-113.png)
+
+break komutu: case bloğundan çıkmak için kullanılır.
+Eğer break kullanılmazsa, bir sonraki case bloğu çalışır
+(bu duruma fall-through denir).
+
+default: Hiçbir case değeriyle eşleşmeyen durum için kullanılır.
+
+Bir değere bağlı olarak birden fazla koşul ve kod akışı olasılığı söz konusu olduğu durumlarda
+switch ifadesi kullanılabilir.
+
+Bu değer byte, short, int, char ya da String tipinde olabilir.
+Örneğin;
+
+![alt text](images/image-114.png)
+
+📤 Output
+
+Enter the number of the day : 3
+Today is Wednesday
+
+switch ile test ettiğimiz değer hiçbir case ifadesi ile eşleşmezse
+default ifadesi altında yer alan kod çalıştırılır.
+
+Burada default ifadesi opsiyoneldir,
+eğer default olarak çalıştırmak istediğimiz bir kod yoksa
+switch ifadesine eklenmeyebilir.
+
+break ifadesi eşleşen case ifadesinin işletilmesinden sonra
+switch ifadesinden kod akışının çıkmasını sağlar.
+
+switch ifadesi bizim için birden fazla koşuldan
+herhangi birinin gerçekleşmesi durumunda
+aynı kod akışının işletilmesine olanak sağlar.
+
+![alt text](images/image-115.png)
+
+📤 Output
+
+Year : 2000
+Month : 2
+Number of Days = 29
+
+Bu örnekte switch ifadesinde test edilen değişkenin hangi case durumu ile eşleştiyse o case'den itibaren altındaki tüm caselerin break ifadesi ile karşılaşıncaya kadar işletildiğine dikkat edelim.
+
+❓ Ternary Operator (Koşul Operatörü)
+
+if-else yapısının kısa bir versiyonudur.
+Koşul doğruysa bir değer, yanlışsa başka bir değer döndürür.
+
+Kullanım:  sonuç = (koşul) ? değer1 : değer2;
+
+📌 Koşul Yapıları ile Önemli Noktalar
+
+Koşul ifadeleri (if, switch) genellikle boolean değer döndüren bir ifadenin sonucuna göre değerlendirilir.
+
+if / else ve switch arasındaki farklar:
+
+if ile daha karmaşık koşul ifadeleri yazılabilirken,
+switch yalnızca belirli veri türleri ile
+(genellikle int, char, String) çalışabilir.
+
+Daha fazla durum kontrolü:
+switch yapısı çok sayıda farklı durumu kontrol etmek için idealdir.
+Ancak, if-else daha esnek koşullar sunar.
+
+Koşul yapıları, kodun işleyişini yönlendirmek için temel yapı taşlarıdır
+ve çok çeşitli kullanım durumlarında oldukça faydalıdır.
