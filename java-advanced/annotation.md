@@ -72,8 +72,18 @@ Javadoc içerisine eklenmesini sağlar.
 
 Alt sınıflara miras kalmasını sağlar.
 
+
 📌 Örnek
-![alt text](images/image-153.png)
+
+import java.lang.annotation.*;
+
+@Target(ElementType.METHOD) // Sadece metotlarda kullanılabilir
+@Retention(RetentionPolicy.RUNTIME) // Runtime'da okunabilir
+@Documented
+@Inherited
+public @interface MyAnnotation {
+}
+
 
 ---
 
@@ -107,11 +117,25 @@ Geliştirici kendi annotation’ını yazabilir.
 
 📌 Örnek
 
-![alt text](images/image-154.png)
+import java.lang.annotation.*;
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface LogTime {
+    String value();
+}
+
 
 📌 Kullanımı
 
-![alt text](images/image-155.png)
+public class PaymentService {
+
+    @LogTime("Ödeme işlemi süresi ölçülüyor")
+    public void pay() {
+        System.out.println("Payment completed");
+    }
+}
+
 
 
 🌱 6. Spring Framework’te Annotation Kullanımı
@@ -143,8 +167,18 @@ GET isteklerini karşılar.
 
 📌 Örnek
 
-![alt text](images/image-156.png)
-![alt text](images/image-157.png)
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Long id) {
+        return userService.getUser(id);
+    }
+}
 
 ⚠️ 7. Sık Yapılan Hatalar
 

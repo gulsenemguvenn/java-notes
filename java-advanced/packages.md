@@ -80,7 +80,7 @@ package anahtar kelimesi ile bir paket tanımlanır.
 Sınıf, bu paket içinde yer alacak şekilde tanımlanır.
 Diğer sınıflar, import anahtar kelimesi ile bu sınıflara erişir.
 
-![alt text](images/images/image-51.png)
+![alt text](images/image-162.png)
 
 3️⃣ Default Package nedir?
 Default package, sınıfın herhangi bir paket belirtilmeden tanımlandığı pakettir. Genellikle küçük projelerde kullanılır, ancak büyük projelerde paketler kullanılarak düzen sağlanması önerilir.
