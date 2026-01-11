@@ -176,3 +176,139 @@ ArrayListin elemanlarına ulaşabilmem için obje olarak tutmam gerekiyor.
 ## HashMap
 
 ![alt text](images/image-13.png)
+
+
+# Collection Framework
+
+## 📌 Collection Framework Nedir?
+
+Java'da **Collection Framework**, veri yapılarını oluşturmak ve bu yapılar üzerinde işlem yapmak için kullanılan sınıflar ve arayüzlerin bir koleksiyonudur. **Collection**, bir grup nesne tutmanın ortak bir yoludur. Koleksiyonlar, genellikle veri tutma ve veri manipülasyonu için kullanılır. Java koleksiyonları **List**, **Set**, **Queue** gibi farklı yapıları içerir ve bu yapıların her biri farklı gereksinimleri karşılamak için optimize edilmiştir.
+
+## 📌 Koleksiyon Çerçevesi'nin Temel Bileşenleri
+
+### 1. Collection Arayüzü
+Bu, Java koleksiyonlarının ana arayüzüdür. Tüm koleksiyon türleri bu arayüzü uygular. List, Set, Queue gibi yapılar bu arayüzün alt sınıflarıdır.
+
+### 2. List Arayüzü
+Verilerin sıralı bir koleksiyonudur ve aynı öğe birden fazla kez tutulabilir. ArrayList, LinkedList gibi sınıflar List arayüzünü uygular.
+
+### 3. Set Arayüzü
+Bu koleksiyon türü, sırasız ve tekrarsız veri saklar. HashSet, LinkedHashSet ve TreeSet gibi sınıflar Set arayüzünü uygular.
+
+### 4. Queue Arayüzü
+Kuyruk yapısı sağlar. PriorityQueue, LinkedList gibi sınıflar Queue arayüzünü uygular.
+
+### 5. Map Arayüzü
+Anahtar-değer çiftleri şeklinde veriler saklar. HashMap, LinkedHashMap ve TreeMap gibi sınıflar Map arayüzünü uygular.
+
+---
+
+## 📌 Koleksiyon Sınıfları ve Kullanım Alanları
+
+### 1. List
+
+List koleksiyonu sıralı bir koleksiyondur ve elemanların eklenme sırasını korur.  
+Aynı öğe birden fazla kez eklenebilir.  
+En yaygın List implementasyonları: ArrayList, LinkedList  
+
+ArrayList Örneği:
+
+![alt text](images/image-151.png)
+
+**Önemli Noktalar:**
+- **ArrayList** dinamik bir dizidir ve sıralıdır. Elemanlara indeksle erişilebilir.
+- **LinkedList**, elemanları bağlı listelerde tutar, bu nedenle ekleme ve silme işlemleri daha hızlıdır, ancak arama işlemleri daha yavaştır.
+
+---
+
+### 2. Set
+
+Set koleksiyonu, tekrarlayan öğeleri kabul etmez.  
+HashSet (sırasız), LinkedHashSet (eklenme sırasına göre sıralı), TreeSet (doğal sıralama ya da Comparator ile sıralama) gibi implementasyonları vardır.
+
+HashSet Örneği:
+
+![alt text](images/image-152.png)
+
+**Önemli Noktalar:**
+- **HashSet** sırasızdır, ancak öğelerin tekrarı kabul edilmez.
+- **LinkedHashSet** eklenme sırasını korur.
+- **TreeSet** öğeleri doğal sıralama ya da belirli bir Comparator'a göre sıralar.
+
+---
+
+### 3. Queue
+
+Queue, FIFO (First In First Out - İlk Giren İlk Çıkar) sırasını takip eden bir koleksiyondur.  
+PriorityQueue ve LinkedList gibi implementasyonlar vardır.
+
+PriorityQueue Örneği:
+
+![alt text](images/image-153.png)
+
+**Önemli Noktalar:**
+- **PriorityQueue**, öğeleri doğal sıralama ya da belirtilen sıralama düzenine göre sıralar.
+- **LinkedList** hem Queue hem de Deque arayüzünü uygulayan bir sınıftır.
+
+---
+
+### 4. Map
+
+Map koleksiyonu, anahtar-değer çiftleri tutar. Anahtarlar eşsizdir ve her anahtar sadece bir değere sahiptir.  
+HashMap, LinkedHashMap, TreeMap gibi implementasyonlar vardır.
+
+HashMap Örneği:
+
+![alt text](images/image-154.png)
+
+**Önemli Noktalar:**
+- **HashMap** anahtarları sırasız olarak tutar.
+- **LinkedHashMap** anahtarları eklenme sırasına göre tutar.
+- **TreeMap** anahtarları doğal sıralama ya da bir Comparator kullanarak sıralar.
+
+---
+
+## 📌 Mülakat Soruları ve Cevapları
+
+### 1️⃣ List ile Set arasındaki fark nedir?
+- List: Elemanların sırası korunur ve aynı öğe birden fazla kez eklenebilir.
+- Set: Elemanlar sırasızdır ve aynı öğe birden fazla kez eklenemez.
+
+### 2️⃣ HashSet ve TreeSet arasındaki farklar nelerdir?
+- HashSet sırasızdır ve HashMap'e dayanır.
+- TreeSet sıralıdır ve Comparator ile sıralanır.
+
+### 3️⃣ Map nedir?
+Map anahtar-değer çiftlerinden oluşur.  
+HashMap, LinkedHashMap, TreeMap gibi implementasyonları vardır.
+
+### 4️⃣ ArrayList ile LinkedList farkı
+- ArrayList: Hızlı erişim, yavaş ekleme/silme
+- LinkedList: Hızlı ekleme/silme, yavaş erişim
+
+### 5️⃣ PriorityQueue nedir?
+Önceliğe göre sıralı çalışan kuyruk yapısıdır.
+
+---
+
+## 📌 Collection Hiyerarşisi
+
+![alt text](images/image-155.png)
+
+---
+
+### ArrayList
+
+![alt text](images/image-156.png)
+
+### LinkedList
+
+![alt text](images/image-157.png)
+
+### HashSet
+
+![alt text](images/image-158.png)
+
+Çıktı:
+
+Popping the stack: F E D B A
