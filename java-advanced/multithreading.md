@@ -27,13 +27,13 @@ Runnable arayüzü daha esnek bir yöntemdir. Bu yöntemde, iş parçacığını
 
 ## **Thread Sınıfını Kullanarak Multithread Örneği**
 
-![alt text](image-117.png)
+![alt text](images/image-53.png)
 
 ---
 
 ## **Runnable Arayüzünü Kullanarak Multithread Örneği**
 
-![alt text](image-118.png)
+![alt text](images/image-54.png)
 
 Her iki örnek de aynı iş parçacığını başlatır ve iki iş parçacığının aynı anda çalışmasını sağlar. Ancak Runnable kullanmak daha esnektir çünkü bir sınıf başka bir sınıfı genişletiyorsa, Runnable arayüzünü implement edebilir.
 
@@ -47,7 +47,7 @@ ExecutorService arayüzü, thread pool yönetimi için kullanılır.
 
 **Thread Pool Örneği**
 
-![alt text](image-119.png)
+![alt text](images/image-55.png)
 
 Bu örnekte, ExecutorService kullanarak iş parçacıkları havuzu oluşturulmuş ve iki iş parçacığı başlatılmıştır. İş bitiminde shutdown() metodu çağrılır.
 
@@ -59,7 +59,7 @@ Birden fazla iş parçacığı aynı kaynağa erişmeye çalıştığında veri 
 
 **Synchronized Örneği**
 
-![alt text](image-120.png)
+![alt text](images/image-56.png)
 
 Bu örnekte, increment() metodu synchronized olarak işaretlendiği için aynı anda sadece bir iş parçacığı bu metodu çalıştırabilir.
 
@@ -73,7 +73,7 @@ Deadlock kelimesinin Türkçe anlamı çıkmaza girmek demektir ve multithread u
 
 **Deadlock Örneği**
 
-![alt text](image-121.png)
+![alt text](images/image-57.png)
 
 Bu örnekte, iş parçacıkları A ve B arasında birbirlerini bekler ve deadlock durumu oluşur.
 
@@ -83,7 +83,7 @@ Bu örnekte, iş parçacıkları A ve B arasında birbirlerini bekler ve deadloc
 
 Bir thread var olmaya başladığı andan itibaren bir durum(state) bilgisine sahip olur. Bu state bilgisi threadin o anki durumuna göre şu değerleri alabilir; NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING ve TERMINATED. State bilgisi değerleri Thread sınıfı içinde tanımlanmıştır.
 
-![alt text](image-122.png)
+![alt text](images/image-59.png)
 
 - **NEW:** Bir thread ilk yaratıldığı anda bu state bilgisine sahip olur.  
 - **RUNNABLE:** start() metodunu çağırdığımız anda threadin state bilgisi Runnable olarak atanır ve artık thread çalışmaya hazırdır. Fakat biz start() metodunu çağırdığımızda direk çalışmaya başlamaz sadece scheduler (planlayıcı) ın kendisine CPU zamanı vermesini bekler.  
@@ -112,20 +112,20 @@ Thread senkronizasyonu önemli olduğu kadar bazı durumlarda çok karmaşık bi
 
 Semaphore sınıfı ortak kullanılan objeler üzerinde threadlerin sıra ile işlem yapmasına olanak verir. Bu işlemi daha önce de klasik thread ve Object sınıfının fonksiyonları ile de yapmıştık. Fakat Semaphore sınıfı bu işlemi çok daha kolay hale getiriyor.
 
-![alt text](image-123.png)
+![alt text](images/image-63.png)
 
 Semaphore sınıfı arka planda bir değişken tutar ve bir thread paylaşılan bir objeye erişmek istediğinde semaphore objesinin acquire() metodunu çağırması gerekir. Semaphore bu durumda eğer kaynak üzerinde çalışan aktif bir thread yoksa erişim isteyen o threade erişim verir ve bu değişkenin değerini artırır. Eğer kaynak üzerinde çalışan başka bir thread varsa bu durumda erişim isteyen thread kaynak müsait oluncaya kadar bloklanır. Daha sonra kaynak üzerinde çalışan thread işini bitirdiği zaman aynı semaphore objesinin release() metodunu çağırır ve kaynağı serbest bırakır. Bu durumda ise semaphore objesinde tutlan değişkenin değeri azaltılır, bu değişkenin değeri 0 olduğu zaman kaynak erişime müsait demektir.
 
 Semaphore sınıfının 2 tane constructoru vardır:
 
-![alt text](image-124.png)
+![alt text](images/image-64.png)
 
 Burada permits parametresi başlangıçta verilecek erişim sayısını ayarlamak için fair parametresi ise true olması durumunda erişim isteyen threadlere erişim isteme sırasına göre erişim verme imkanı sunuyor.
 
 Şimdi Semaphore sınıfının nasıl kullanıldığını görmek için bir örnek yapalım:
 
-![alt text](image-125.png)  
-![alt text](image-126.png)
+![alt text](images/image-65.png) 
+![alt text](images/image-66.png)
 
 Çıktı :
 
@@ -158,8 +158,8 @@ Burada number threadin çalışmaya başlamadan önce bekleyeceği event sayıs�
 
 Şimdi bunları bir örnekle görelim:
 
-![alt text](image-127.png)  
-![alt text](image-128.png)
+![alt text](images/image-67.png)  
+![alt text](images/image-68.png)
 
 Çıktı :
 
@@ -182,12 +182,12 @@ Bu örnekte yine bir önceki örnekteki SharedObject sınıfını threadler tara
 
 CyclicBarrier belli sayıda threadin istenilen noktaya ulaşıncaya dek ulaşan threadlerin o noktada diğerlerini beklemesi gerektiği durumlarda kullanılır. İstenilen tüm threadlerin herbiri istenilen noktaya ulaşması ile CyclicBarrier objesi üzerinden await() metodunu çağrırarak diğer threadleri beklemeye başlar. CyclicBarrier sınıfının iki constructor u vardır;
 
-![alt text](image-129.png)
+![alt text](images/image-69.png)
 
 numThreads kaçtane threadin bariyer noktasına ulaşması gerektiğini, action ise bariyer geçildiği anda gerçekleştirilmesi gereken taskı belirtir. Şimdi bütün bunların nasıl kullanıldığı bir örnekle görelim:
 
-![alt text](image-130.png)  
-![alt text](image-131.png)
+![alt text](images/image-70.png) 
+![alt text](images/image-71.png)
 
 Çıktı :
 
@@ -218,8 +218,8 @@ Bu örnekte 3 tane thread yarattık ve herbirinin 1den 15e kadar saymasını ve 
 
 Exchanger iki thread arasında aynı türden veri değiştirmeye yarar. Burada veri değiştirmek isteyen threadler aynı Exchanger objesinin exchange() metodunu değiştirmek istedikleri veri ile çağırır. Bir thread exchange() metodunu çağırınca diğer thread de aynı metodu çağırana kadar ilk thread bloklanır. İki thread de exchange() metodunu çağırdığı noktaya geldiği zaman veri değişimi gerçekleşir, burada veri değişimi çift yönlüdür. Şimdi Exchanger sınıfının nasıl kullanıldığını bir örnekle görelim:
 
-![alt text](image-132.png)  
-![alt text](image-133.png)
+![alt text](images/image-72.png)
+![alt text](images/image-73.png)
 
 Çıktı :
 
@@ -237,8 +237,8 @@ Phaser son senkronizasyon sınıfımız, bir kaç adımdan oluşan bir fonksiyon
 
 Phaser aslında bir noktada CyclicBarrier a da benziyor. CyclicBarrier ile benzer işlemi döngüler kullanarak yapmıştık fakat bazen ihtiyacımız olan işlem döngülerle yönetemeyeceğimiz bir işlem olabilir. Bu durumda daha doğal ve sade olan Phaser ı kullanmak çok daha kolay ve iyi olacaktır. Ayrıca CyclicBarrier sınıfını kullanırken en başta kaç tane threadin senkronizasyona katılacağını belirtiyoruz fakat Phaser kullanırken thread katılımını dinamik olarak yönetebiliyoruz.
 
-![alt text](image-134.png)  
-![alt text](image-135.png)
+![alt text](images/image-74.png)  
+![alt text](images/image-75.png)
 
 Çıktı :
 
@@ -264,7 +264,7 @@ Phaser bize thread senkronizasyonunu yönetme konusunda pek çok kullanışlı m
 
 ## **Executor kullanımı**
 
-![alt text](image-136.png)
+![alt text](images/image-76.png)
 
 Bu noktaya kadarki tüm örneklerimizde Runnable interfaceini kullanarak tasklarımızı yarattık ve daha sonra bu taskları çalıştırmak üzere thread leri kendimiz manuel olarak yarattık. Bu işlem basit örnekler için yeterli olsa da gerçek hayat uygulamalarında thread yaratmak ve onları yönetmek çok maliyetli bir işlem. İşte bu noktada threadleri yaratmak ve yönetmek için Java programlama dilinin bize sunduğu farklı ihtiyaçlara cevap veren executorları kullanabiliriz.
 
@@ -280,7 +280,7 @@ ThreadPoolExecutor sınıfı dolaylı yoldan ExecutorService interfaceini implem
 
 Bir thread pool bir grup taskı her bir task için ayrı thread yaratmadan havuzda var olan threadleri tekrar tekrar kllanarak işletmeye yarar. Bu işlemi yönetmek için bir executor yaratmak gerekir. Yeni executor yaratmak için Java'da Executors isimli utility sınıfının static metodları kullanılabilir, bu metodlar aşağıdaki gibidir:
 
-![alt text](image-137.png)
+![alt text](images/image-77.png)
 
 newFixedThreadPool() metodu belli sayıda threadden oluşan ve yeni thread ekleme yapmadan gerektiğinde boş durumdaki threadleri kullanmaya yarayan bir executor yaratır. newCachedThreadPool() metodu ise gerektiğinde havuzdaki boşta olan threadleri kullanmaya yarayan ama boşta thread olmadığında ise havuza yeni thread ekleyen bir executor yaratır. newScheduledThreadPool() ise thread pool mantığını ve threadlerin üzerinde zamanlamayı mümkün kılan bir executor yaratır.
 
@@ -290,13 +290,13 @@ newFixedThreadPool() metodu belli sayıda threadden oluşan ve yeni thread eklem
 
 Daha önce Runnable interfaceini kullanarak nasıl tasklar yarattığımızı görmüştük. Runnable interfacei içinde void tipinde dönüş değeri olan run() metodu içerisinde çalıştırmak istediğimiz işlemleri yapıp taskın son bulmasını bekliyorduk. Burada run() metodu void tipinde olduğu için bize bir sonuç dönmüyor, işte bu noktada çalıştırdığımız threadlerden sonuç da alabilmek için Callable interfaceini kullanabiliriz. Callable interfacei jeneric bir fonksiyonel interface, içerisinde bulunan call() mettodunun yapısı aşağıdaki gibi:
 
-![alt text](image-138.png)
+![S](images/image-78.png)
 
 call() metodunu implemente ederek yapmak istediğimiz işlemleri buraya koyabilir sonucunu da dönebiliriz.
 
 Executor service içerisinde Callable tipinde tasklar çalıştırmak için submit() metodu yeralır. Bu metod bir callable taskı alır ve tasktan dönen değeri Future isimli bir objenin içerisine koyarak bize döner. submit() metodunun genel yapısı aşağıdaki gibidir:
 
-![alt text](image-139.png)
+![alt text](images/image-79.png)
 
 Submit metodunu çağırdığımız zaman bize Future tipinde bir obje dönüyor, bu obje task thread tarafından çalıştırılıp bir sonuç döndüğü zaman bu sonuca erişmemizi sağlar. Bu sonucu alabilmek için Future tipindeki objeden get() metodunu çağırmamız gerekir. Burada get metodunun iki farklı implementasyonu vardır:
 
@@ -307,7 +307,7 @@ Birinci get() metodu herhangi bir bekleme parametresi almadığı için sonucun 
 
 Şimdi Callable ve Future sınıflarının nasıl kullanıldığına bir örnekle bakalım:
 
-![alt text](image-140.png)
+![alt text](images/image-80.png)
 
 Çıktı :
 
@@ -316,7 +316,7 @@ Future results are being collected
 Factorial of 10 is 3628800  
 Sum of 10 is 45  
 Future results are collected  
-com.hkarabakla.Main thread completed
+com.gulsenem.Main thread completed
 
 Bu örnekte bir sayının factorial değerini ve birden o sayıya kadar olan sayıların toplamını hesaplayan iki tane Callable taskı yarattık ve bu taskları bir executor service aracılığı ile çalıştırdık. com.hkarabakla.Main threadin future objeleri üzerinden get() metodunu çağırdığında nasıl bloklandığını görmek için ise callable tasklarını çalıştıran threadlerin sleep() metodu yardımıyla 3er saniye uyumasını sağladık. Böylece executor service, callable ve future kavramlarının nasıl kullanıldığını görmüş olduk.
 

@@ -32,14 +32,14 @@ Java’da hata yönetimi, try, catch, finally bloklarıyla yapılır.
 
 Örnek:
 
-![alt text](images/image-14.png)
+![alt text](images/image-125.png)
 
 ### 2. Throws Anahtar Kelimesi
 Bir metodun içerisinde exception (hata) meydana geldiğinde, bu hatanın dışarıya fırlatılmasını sağlamak için throws anahtar kelimesi kullanılır. Bu, metodun imzasında yer alır ve metodu çağıran yerin bu hatayı yönetmesini bekler.
 
 Örnek:
 
-![alt text](images/image-15.png)
+![alt text](images/image-126.png)
 
 Bu örnekte, readFile metodu bir IOException hatasını fırlatır. Bu metodun çağırıldığı yerde try-catch bloğu ile hata yönetimi yapılmalıdır.
 
@@ -54,7 +54,7 @@ Java'da kullanıcıların kendi özel hata sınıflarını oluşturmaları mümk
 
 Özel Bir Exception Sınıfı Tanımlama:
 
-![alt text](images/image-16.png)
+![alt text](images/image-127.png)
 
 Bu şekilde oluşturulan hata sınıfı, bir method tarafından fırlatılabilir ve try-catch bloğu ile yönetilebilir.
 
@@ -93,7 +93,7 @@ throws ise bir metodun imzasında yer alır ve bu metodun hangi hataları fırla
 ### 5️⃣ Java’da kendi exception sınıfınızı nasıl tanımlarsınız?
 Cevap: Kendi exception sınıfınızı, Exception veya RuntimeException sınıfından türeterek tanımlayabilirsiniz. Bu sınıf, hata mesajlarını almak ve iletmek için özel bir yapıcı (constructor) içerebilir.
 
-![alt text](images/image-17.png)
+![alt text](images/image-128.png)
 
 ### 6️⃣ finally bloğu her zaman çalışır mı?
 Cevap: Hayır, finally bloğu genellikle çalışır, ancak bazı istisnai durumlar (örneğin, JVM kapanması) finally bloğunun çalışmamasına neden olabilir.
@@ -114,13 +114,13 @@ compile : kodumuzun çalışır hale gelmesi.
 
 ister try çalışsın ister catch finally her şekilde çalışır.Birden fazla catch bloğu kullanabiliriz.
 
-![alt text](images/image-18.png)
+![alt text](images/image-129.png)
 
 ---
 
 ## Exception Hiyerarşisi
 
-![alt text](images/image-19.png)
+![alt text](images/image-130.png)
 
 Exception  , uygulamada yazdığımız kodlara yönelik hatalardır. Exxceptionları biz kodlarla kontrol altında tutabiliyoruz(try-catch).Bütün exceptionlar , exception classından inherite edilir yani extend edilir.
 
@@ -136,7 +136,7 @@ FileNotFoundException : sistem belirtilen dosyayı bulamazsa hatası.
 
 *thorws IOException
 
-![alt text](images/image-20.png)
+![alt text](images/image-131.png)
 
 ---
 
@@ -166,7 +166,7 @@ Javada hata yakalama beş anahtar kelime ile yönetilir; **try**, **catch**, **t
 
 try ve catch bloğunun genel yapısı aşağıdaki gibidir. try tek başına kullanılabilir ama catch ifadesi sadece try ile birlikte kullanılabilir.
 
-![alt text](images/image-21.png)
+![alt text](images/image-132.png)
 
 try bloğu içerisinde bir hata oluştuğu zaman, blok içerisinde hatanın gerçekleştiği noktadan sonra gelen kod işletilmez. O noktadan itibaren kodun akışı oluşan hata ile en çok uyumlu olan catch bloğuna geçer. O nedenle catch bloğunu oluştururken hata tipi seçimi önemlidir. catch bloğuna oluşan hata objesi argüman olarak verilir ve blok içerisinde hata işlenir.
 
@@ -174,11 +174,11 @@ Eğer hiçbir hata oluşmaz ise kod akışı en son catch ifadesinden sonraki ko
 
 Kod içerisinde şöyle bir akış olduğunu düşünelim; a() metodu içerisinde bir noktada b() metodunu çağırsın ve b() metodu içinde bir noktada c() metodunu çağırsın ve c() metodu çalıştırılırken bir hata alalım. Eğer hata c() metodu içerisinde yakalanmıyorsa hata hierarşide bir üst katmana aktarılır yani b() metodunda c() metodunu çağırdığımız noktaya. Eğer o noktada da hatayı yakalayan bir catch bloğu yoksa hata bir üst katmana yani a() metodu içinde b() metodunun çağrıldığı yere aktarılır. Eğer bu noktada bu hatayı yakalayacak bir catch bloğu varsa hata orada yakalınır ve işlenir. Yok ise bu hata main metoduna kadar aktarılır ve uygulamanın durmasına neden olabilir.
 
-![alt text](images/image-22.png)
+![alt text](images/image-133.png)
 
 Şimdi bütün bu öğrendiklerimizi bir örnekle kod üzerinde görelim;
 
-![alt text](images/image-23.png)
+![alt text](images/image-135.png)
 
 Output :
 
@@ -191,15 +191,15 @@ Bu örnek bize hata yakalamanın nasıl işlediğine dair pek çok bilgi veriyor
 
 Bu örnekte hatanın yakalanmadığını düşünelim;
 
-![alt text](images/image-24.png)
+![alt text](images/image-136.png)
 
 Output :
 
 before calling put value  
     putValue method started  
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10  
-	at com.hkarabakla.inheritance.ArrayOperations.putValue(ArrayOperations.java:7)  
-	at com.hkarabakla.inheritance.com.hkarabakla.Main.main(com.hkarabakla.Main.java:11)  
+	at com.gulsenem.inheritance.ArrayOperations.putValue(ArrayOperations.java:7)  
+	at com.gulsenem.inheritance.com.gulsenem.Main.main(com.gulsenem.Main.java:11)  
 
 Process finished with exit code 1
 
@@ -207,15 +207,15 @@ Bu çıktı bize uygulamayı debug ederken hatanın yerini bulmak için yardımc
 
 Şimdi catch bloğunun bulunması fakat fırlatılan hata ile eşleşmemesi durumunda neler olur ona bakalım;
 
-![alt text](images/image-25.png)
+![alt text](images/image-137.png)
 
 Output :
 
 try block is started  
     putValue method started  
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10  
-	at com.hkarabakla.inheritance.ArrayOperations.putValue(ArrayOperations.java:7)  
-	at com.hkarabakla.inheritance.com.hkarabakla.Main.main(com.hkarabakla.Main.java:11)  
+	at com.gulsenem.inheritance.ArrayOperations.putValue(ArrayOperations.java:7)  
+	at com.gulsenem.inheritance.com.gulsenem.Main.main(com.gulsenem.Main.java:11)  
 
 Process finished with exit code 1
 
@@ -223,7 +223,7 @@ Sonuç aynı, doğru hata türünü catch bloğunda kullanmak o nedenle önemli,
 
 Hatalar uygun bir şekilde yakalanırsa uygulamanın çalışmaya devam edeceğini söylemiştik, şimdi bunu başka bir örnekle görelim;
 
-![alt text](images/image-26.png)
+![alt text](images/image-138.png)
 
 Output :
 
@@ -242,7 +242,7 @@ Bu örnekte eşit sayıda int değer taşıyan iki array tanımlanmış ve bir f
 
 Bir try ifadesinin birden fazla catch bloğu ile ilişkilendirilebileceğini söylemiştik. Böyle bir durumda aralarında üst sınıf alt sınıf ilişkisi bulunan hata sınıflarından; önce alt sınıf hatayı sonra üst sınıf hatayı catch blokları ile yakalamalıyız. Yani herzaman hata sıralamasında özelden genele doğru gidilmeli. Tersi durumda compiler hata verecektir. Şimdi daha iyi anlayabilmek için bunu bir örnekle görelim;
 
-![alt text](images/image-27.png)
+![alt text](images/image-139.png)
 
 Output :
 
@@ -263,7 +263,7 @@ ArithmeticException sınıfı RuntimeException sınıfından türetilmiş bir ha
 
 Daha önce fırlatılan hataların nasıl yakalanacağını gördük. Bazı durumlarda kod içerisinden çeşitli nedenlerle isteyerek ve bilerek bizim de hata fırlatmamız gerekebilir. Bu durumda bir hata objesi oluşturmamız ve onu throw ifadesi ile fırlatmamız gerekir. Yada catch bloğu içinde yakaladığımız bir hatayı işledikten sonra hatayı bir üst katmanda da işlensin diye bir üst katmana tekrar fırlatmamız gerekebilir. Bu durumda tekrar hata objesi oluşturmamız gerekmez catch bloğuna gelen hatayı aynen fırlatabiliriz. Şimdi bunu bir örnekle görelim;
 
-![alt text](images/image-28.png)
+![alt text](images/image-140.png)
 
 Output :
 
@@ -276,13 +276,13 @@ Fatal error, program terminated
 
 Bazı durumlarda try-catch ifadesini terk etmeden hemen önce çalıştırmamız gereken kodlar olabilir. Bu durumlar genelde try bloğu içinde bir dosya açtıysak onu kapatmak için yada bir network bağlantısı kurduysak o bağlantıyı kapatmak için kullanılan kodlardır. Bu tarz durumlar programlamada oldukça yaygındır ve java bize bu durumu yönetmek için finally ifadesini sunuyor. Genel yapısı şu şekildedir;
 
-![alt text](images/image-29.png)
+![alt text](images/image-141.png)
 
 Bu yapıda finally bloğu catch bloğundan sonra gösterilmiştir ama teoride finally bloğu doğrudan try bloğunun ardından da gelebilir, exception yakalanmayacağı için finally ifadesi işletildikten sonra hata bir üst katmana iletilecektir. try bloğu içinden fırlatılan hata daha üst katmanlarda yakalanmaz ise uygulama son bulur. Bu durum teoride mümkün olsa da pratikte gerçekten böyle bir ihtiyaç olmadığı sürece tercih edilmemelidir.
 
 Şimdi finally bloğunu bir örnekle inceleyelim;
 
-![alt text](images/image-30.png)
+![alt text](images/image-142.png)
 
 Bu örnekte try bloğu içerisinde bir dosya okuma işlemi yapılıyor. Bu işlem sırasında dosyadaki verileri almak için bir FileInputStream açılıyor, bu stream işlem sonrasında kapatılması gerekiyor. Bu kapatma işlemini finally bloğu içinde yapabiliriz. FileInputStream kapanma sırasında IOException fırlatabileceği için (önceden kapanma durumunda olduğu gibi) input.close(); ifadesi de try bloğu içerisine alınmıştır.
 
@@ -292,11 +292,11 @@ Bu örnekte try bloğu içerisinde bir dosya okuma işlemi yapılıyor. Bu işle
 
 Bazı durumlarda bir metod bir yada birkaç hata yarattığı halde bu hataları kendi içinde yakalamak yerine hata yakalama işini kendisini çağıran metodlara bırakır. Bu durumda yakalanmayan hatalar metod imzasına throws ifadesi ile eklenir ve bu metodu çağıran kod parçası bu hatayı yakalamaya zorlanır. Bu zorlamayı compiler bizim için yapar. Genel yapı şu şekildedir;
 
-![alt text](images/image-31.png)
+![alt text](images/image-143.png)
 
 Burada exception_list virgül ile ayrılmış hata listesini içerir. Şimdi bir önceki örneği biraz değiştirerek throws ifadesinin nasıl kullanıldığını bir örnekle görelim;
 
-![alt text](images/image-32.png)
+![alt text](images/image-144.png)
 
 catch bloğunun ortadan kalktığına ve throws IOException ifadesinin metod imzasına eklendiğine dikkat edelim.
 
@@ -308,13 +308,13 @@ catch bloğunun ortadan kalktığına ve throws IOException ifadesinin metod imz
 
 Daha önceki örneklerdee gördüğümüz dosya okuma işlemini şimdi try-with-resource ile tekrar yapalım ve kodun nasıl sadeleştiğine dikkat edelim;
 
-![alt text](images/image-33.png)
+![alt text](images/image-145.png)
 
 Görüldüğü gibi aynı işi yapan kod çok daha kısa ve sade.
 
 Eğer birden fazla kaynağa erişmemiz gerekirse try bloğu içinde, bu drumda aşağıdaki örnekte gösterildiği gibi kaynaklar noktalı virgül ile ayrılarak erişilebilir.
 
-![alt text](images/image-34.png)
+![alt text](images/image-146.png)
 
 ---
 
@@ -322,7 +322,7 @@ Eğer birden fazla kaynağa erişmemiz gerekirse try bloğu içinde, bu drumda a
 
 Daha önce tüm exceptionların Throwable sınıfından türediğinden ve onun altında Error ve Exception sınıflarının bulunduğundan bahsetmiştik. Şimdi bütün exception hiyerarşisine tekrar gözatalım ve bu yapının arkasında yatan mantığı anlamaya çalışalım.
 
-![alt text](images/image-35.png)
+![alt text](images/image-147.png)
 
 Grafikte görüldüğü gibi tüm exceptionların atası Throwable sınıfı, onun altında Error sınıfı ve Exception sınıfı yer alıyor. Exception sınıfının altında ise RuntimeException sınıfı ve diğer pekçok exception sınıfı bulunuyor. Bu kısımda daha çok RuntimeException ve diğer kardeşlerinden bahsedeceğiz.
 

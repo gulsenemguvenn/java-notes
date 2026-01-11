@@ -2,7 +2,7 @@
 
 Java 8 versiyonuna eklenen en önemli özelliklerden biri olan **Stream API**, bir grup veri üzerinde **sıralı** ya da **paralel** olarak **fonksiyonel yaklaşımla** işlemler yapmaya yarar. Bu işlemlerin başında **filtreleme**, **veri dönüştürme**, **döngü**, **minimum** ya da **maksimum** değer bulma sayılabilir. Aşağıdaki diagram bir **stream pipeline**’ının nasıl çalıştığını gösteriyor;
 
-![alt text](image-78.png)
+![alt text](images/image-30.png)
 
 ---
 
@@ -16,7 +16,7 @@ Stream objesi çok farklı kaynaklar kullanılarak farklı şekillerde yaratıla
 
 Boş bir stream objesi yaratmak için `Stream` sınıfının `empty()` metodunu yaratmak yeterlidir. Stream objeleri de diğer objeler gibi metodlar tarafından return edilebilir, eğer böyle stream dönen bir metodumuz varsa ve stream objesi yaratılamıyorsa bu durumda boş stream dönmek faydalı olur.
 
-![alt text](image-79.png)
+![alt text](images/image-31.png)
 
 ---
 
@@ -24,7 +24,7 @@ Boş bir stream objesi yaratmak için `Stream` sınıfının `empty()` metodunu 
 
 Arraylerden stream yaratmak için Java bize iki tane yöntem sunuyor; birincisi `Stream` sınıfının `of()` metodunu bir array input vererek çağırmak, ikincisi ise `Arrays` utility sınıfının `stream()` metoduna bir array input vererek çağırmak.
 
-![alt text](image-80.png)
+![alt text](images/image-32.png)
 
 ---
 
@@ -42,7 +42,7 @@ Burada builder metodunun hemen önündeki ifadesine dikkat etmek gerekir, builde
 
 `Stream` sınıfı altında bulunan `generate()` metodu bir `Supplier` argüman alır ve supplier’ın ürettiği verilerden sonsuz bir stream üretir. Bu sonsuz stream biz bir limit vermediğimiz sürece memory dolana kadar stream objesini doldurur. O nedenle üretilecek streamin boyutunu `limit()` metodu yardımıyla vermek gerekir. Bu yöntem sabit streamler ya da random değerler taşıyan streamler üretmek için oldukça kullanışlıdır.
 
-![alt text](image-81.png)
+![alt text](images/image-33.png)
 
 Bu örnek içinde 10 tane `"java is awesome !"` değeri bulunduran bir stream yaratır.
 
@@ -52,7 +52,7 @@ Bu örnek içinde 10 tane `"java is awesome !"` değeri bulunduran bir stream ya
 
 `iterate()` metodu bir ilk değer ve bir adet fonksiyonu parametre olarak kabul eder, daha sonra bu ilk değeri önce streamin ilk elemanı olarak ekleyip sonra bu fonksiyona parametre olarak verir, sonrasında fonksiyondan dönen değeri streame koyar ve tekrar fonksiyonu bu dönen değer ile çağırır. Bu işlemi sonsuz defa yaparak streami doldurur, o nedenle `generate()` metodunda yaptığımız gibi `limit()` fonksiyonu ile streamin boyutunu belirlemek gerekir.
 
-![alt text](image-82.png)
+![alt text](images/image-34.png)
 
 Bu örnek çalıştığı zaman şöyle bir stream oluşturur; `20, 40, 80, 160, 320`
 
@@ -68,11 +68,11 @@ Java programlama dilinde sayısal (numeric) streamler yaratmak için üç tane s
 
 Bu sınıfların `range()` ve `rangeClosed()` metodlarını çağırarak sayısal streamler yaratmak mümkün. Bu metodların genel yapısı aşağıda gösterildiği gibidir;
 
-![alt text](image-83.png)
+![alt text](images/image-35.png)
 
 Bu sınıfların dışında `Random` sınıfı içinde de random sayısal streamler yaratmak için `ints()`, `longs()` ve `doubles()` isminde metodlar yer alır.
 
-![alt text](image-84.png)
+![alt text](images/image-36.png)
 
 ---
 
@@ -102,7 +102,7 @@ Ara işlemler ile stream üzerinde işlem yaparız ve streame erişmeye devam ed
 
 Şimdi bir stream pipeline örneğine bakalım;
 
-![alt text](image-85.png)
+![alt text](images/image-37.png)
 
 Örnekte `Random` sınıfı kullanılarak bir `IntStream` yaratılmış ve bu stream üzerinde önce 10’dan küçük olan değerler filtrelenmiş sonra filtrelenen değerler sıralanmış son olarak da bu değerler toplanmış. `sum()` metodu sonlandırıcı bir işlem olduğu için artık stream erişilemez hale gelmiştir.
 
@@ -114,7 +114,7 @@ Ara işlemler ile stream üzerinde işlem yaparız ve streame erişmeye devam ed
 
 Stream elemanları üzerinde döngü kurmak için `forEach()` metodu kullanılabilir. `forEach` metodu bir `Consumer` alır ve bu metoda vereceğimiz consumer lambda fonksiyonu ile tek tek stream elemanları üzerinde dolaşarak işlem yapabiliriz.
 
-![alt text](image-86.png)
+![alt text](images/image-38.png)
 
 ---
 
@@ -122,7 +122,7 @@ Stream elemanları üzerinde döngü kurmak için `forEach()` metodu kullanılab
 
 Stream üzerinde `filter()` metodu çağrılarak filtreleme yapılabilir. `filter()` metodu bir `Predicate` alır ve stream üzerindeki her bir eleman için bu predicate çalıştırılır ve predicate hangi eleman için `true` dönerse o elemanlar filtrelenir.
 
-![alt text](image-87.png)
+![alt text](images/image-39.png)
 
 ---
 
@@ -130,11 +130,11 @@ Stream üzerinde `filter()` metodu çağrılarak filtreleme yapılabilir. `filte
 
 Stream üzerinde dolaşırken bazen elimizdeki değerleri farklı tipte verilere dönüştürmek ya da tipini değiştirmeden sadece değer üzerinde değişiklik yapmak isteyebiliriz. İşte bu durumda `map()` metodu yardımıyla dönüşüm işlemini yapabiliriz.
 
-![alt text](image-88.png)
+![alt text](images/image-40.png)
 
 Bazı durumlarda da elimizde kendi fieldlarını içeren bir grup obje olabilir ve biz sadece o objelerin bir fieldında bulunan değerlerden bir stream yaratmak isteyebiliriz. İşte bu durumda `flatMap()` metodu kullanılabilir, `flatMap` metoduna verilen fonksiyon bir stream dönmelidir;
 
-![alt text](image-89.png)
+![alt text](images/image-41.png)
 
 ---
 
@@ -142,7 +142,7 @@ Bazı durumlarda da elimizde kendi fieldlarını içeren bir grup obje olabilir 
 
 Bazen de elimizde bulunan stream içerisinde belli bir şartı yerine getiren bir eleman var mı yok mu sadece bunu bilmek isteriz. İşte bu durumda matching metodları bu kriteri test etmemize yardımcı olur;
 
-![alt text](image-90.png)
+![alt text](images/image-42.png)
 
 ---
 
@@ -150,4 +150,4 @@ Bazen de elimizde bulunan stream içerisinde belli bir şartı yerine getiren bi
 
 Stream sınıfı içinde yer alan `reduce()` metodu stream içinde yer alan bir grup elemandan tek bir değer yaratmaya yarar.
 
-![alt text](image-91.png)
+![alt text](images/image-43.png)

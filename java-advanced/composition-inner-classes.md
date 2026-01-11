@@ -10,7 +10,7 @@ Bir nesnenin başka bir nesneyi içerdiği bir ilişki kurulur. Bu ilişki "has-
 📌 Örnek:  
 Bir Araba sınıfı, Motor sınıfını içerebilir. Yani, bir araba bir motora sahiptir.
 
-![alt text](images/image-141.png)
+![alt text](images/image-148.png)
 
 ### Önemli Noktalar
 
@@ -37,15 +37,14 @@ Dış sınıfın bir örneği ile ilişkili olup, dış sınıfın üyelerine do
 
 📌 Örnek:
 
-![alt text](images/image-142.png)
+![alt text](images/image-149.png)
 
 ### 2. Static Nested Class (Statik İç Sınıf)
 
 Dış sınıfın **statik bir örneği** ile ilişkili olup dış sınıfın statik üyelerine erişebilir.
 
 📌 Örnek:
-
-![alt text](images/image-143.png)
+![alt text](images/image-150.png)
 
 ### 3. Local Inner Class (Yerel İç Sınıf)
 
@@ -53,7 +52,7 @@ Dış sınıfın **statik bir örneği** ile ilişkili olup dış sınıfın sta
 
 📌 Örnek:
 
-![alt text](images/image-144.png)
+![alt text](images/image-151.png)
 
 ### 4. Anonymous Inner Class (Anonim İç Sınıf)
 
@@ -61,7 +60,7 @@ Dış sınıfın **statik bir örneği** ile ilişkili olup dış sınıfın sta
 
 📌 Örnek:
 
-![alt text](images/image-145.png)
+![alt text](images/image-152.png)
 
 ---
 

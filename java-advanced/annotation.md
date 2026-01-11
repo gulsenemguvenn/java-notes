@@ -73,7 +73,7 @@ Javadoc içerisine eklenmesini sağlar.
 Alt sınıflara miras kalmasını sağlar.
 
 📌 Örnek
-![alt text](images/image-2.png)
+![alt text](images/image-153.png)
 
 ---
 
@@ -107,11 +107,11 @@ Geliştirici kendi annotation’ını yazabilir.
 
 📌 Örnek
 
-![alt text](images/image-3.png)
+![alt text](images/image-154.png)
 
 📌 Kullanımı
 
-![alt text](images/image-4.png)
+![alt text](images/image-155.png)
 
 
 🌱 6. Spring Framework’te Annotation Kullanımı
@@ -143,7 +143,8 @@ GET isteklerini karşılar.
 
 📌 Örnek
 
-![alt text](images/image-5.png)
+![alt text](images/image-156.png)
+![alt text](images/image-157.png)
 
 ⚠️ 7. Sık Yapılan Hatalar
 
@@ -160,5 +161,3 @@ konfigürasyonu sadeleştiren ve kodu okunabilir hale getiren yapılardır.
 Doğru yerde kullanıldığında
 hem geliştirme hem test süreçlerini kolaylaştırır.
 
-![alt text](images/image.png)
-![alt text](images/image-1.png)

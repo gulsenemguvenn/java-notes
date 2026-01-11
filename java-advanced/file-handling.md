@@ -18,14 +18,14 @@ Dosya oluşturmak için File sınıfını kullanabilirsiniz.
 
 Örnek:
 
-![alt text](images/image-36.png)
+![alt text](images/image-107.png)
 
 ### 2. Dosya Okuma
 Dosya okumak için FileReader veya BufferedReader kullanılır.
 
 Örnek:
 
-![alt text](images/image-37.png)
+![alt text](images/image-108.png)
 
 try-with-resources kullanmak, kaynakları düzgün şekilde kapatmak için en iyi yaklaşımdır.
 
@@ -34,21 +34,21 @@ Dosya yazmak için FileWriter veya BufferedWriter sınıfları kullanılır.
 
 Örnek:
 
-![alt text](images/image-38.png)
+![alt text](images/image-109.png)
 
 ### 4. Dosya Silme
 Bir dosyayı silmek için delete() metodunu kullanabilirsiniz.
 
 Örnek:
 
-![alt text](images/image-39.png)
+![alt text](images/image-110.png)
 
 ### 5. Dosya Özellikleri
 Bir dosyanın var olup olmadığını, boyutunu, okunabilirliğini vb. özelliklerini kontrol etmek için File sınıfını kullanabilirsiniz.
 
 Örnek:
 
-![alt text](images/image-40.png)
+![alt text](images/image-111.png)
 
 ---
 
@@ -57,26 +57,26 @@ Java 7 ile birlikte NIO (New I/O) sınıfları tanıtıldı. NIO, daha verimli I
 
 Örnek: Dosya Kopyalama (NIO ile)
 
-![alt text](images/image-41.png)
+![alt text](images/image-112.png)
 
 ---
 
 Java içindeki hazır sınıflar ile dosya işlemlerini yapabiliyoruz.
 
 ### Dosya yoksa yeni dosya oluştursun varsa dosya var desin:
-![alt text](images/image-42.png)
+![alt text](images/image-113.png)
 
 ### Dosya Bilgilerini Okumak
-![alt text](images/image-43.png)  
-![alt text](images/image-44.png)
+![alt text](images/image-114.png)
+![alt text](images/image-115.png)
 
 ### Dosyaların Okunması
-![alt text](images/image-45.png)  
-![alt text](images/image-46.png)
+![alt text](images/image-116.png) 
+![alt text](images/image-117.png)
 
 ### Dosyaya Yazmak
-![alt text](images/image-47.png)  
-![alt text](images/image-48.png)
+![alt text](images/image-118.png) 
+![alt text](images/image-119.png)
 
 ---
 

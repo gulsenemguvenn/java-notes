@@ -29,13 +29,13 @@ JDBC, birkaç temel bileşenden oluşur:
 
 Veritabanı ile bağlantı kurabilmek için uygun JDBC driver yüklenir.
 
-![alt text](images/image-111.png)
+![alt text](images/image-92.png)
 
 ### **2. Veritabanı Bağlantısı Kurmak**
 
 DriverManager sınıfı kullanılarak bağlantı oluşturulur.
 
-![alt text](images/image-112.png)
+![alt text](images/image-93.png)
 
 ---
 
@@ -50,19 +50,19 @@ JDBC ile kullanılan temel SQL komutları:
 
 ### **SELECT**
 
-![alt text](images/image-113.png)
+![alt text](images/image-94.png)
 
 ### **INSERT**
 
-![alt text](images/image-114.png)
+![alt text](images/image-95.png)
 
 ### **UPDATE**
 
-![alt text](images/image-115.png)
+![alt text](images/image-96.png)
 
 ### **DELETE**
 
-![alt text](images/image-116.png)
+![alt text](images/image-97.png)
 
 ---
 

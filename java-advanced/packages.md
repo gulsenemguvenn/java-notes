@@ -35,12 +35,12 @@ Kullanıcı Tanımlı Paketler: Kullanıcıların oluşturduğu ve projelerinde 
 **Paket Tanımlama:**
 Bir sınıfı bir pakete dahil etmek için, sınıfın en üst kısmına package anahtar kelimesi eklenir.
 
-![alt text](image-146.png)
+![alt text](images/image-48.png)
 
 Paket ile Erişim:
 Bir sınıf, kendi paketinden başka bir pakete ait sınıflara erişmek için import anahtar kelimesi kullanır.
 
-![alt text](image-147.png)
+![alt text](images/image-49.png)
 
 # **📌 Paket ve Dosya Sistemi**
 
@@ -53,7 +53,7 @@ Bir sınıf, kendi paketinden başka bir pakete ait sınıflara erişmek için i
 **📌 Default Package (Varsayılan Paket)**
 Eğer bir sınıf hiçbir paket belirtilmeden tanımlanırsa, o sınıf default package içinde yer alır. Ancak, default package genellikle büyük projelerde kullanılmaz, çünkü ad çakışmalarını ve yönetim sorunlarını beraberinde getirebilir.
 
-![alt text](image-148.png)
+![alt text](images/image-50.png)
 
 **📌 Paketler ve Erişim Kontrolü**
 Java'da erişim belirleyicileri (access modifiers), bir sınıfın, metodun veya değişkenin hangi paketlerden ve sınıflardan erişilebileceğini kontrol eder:
@@ -80,7 +80,7 @@ package anahtar kelimesi ile bir paket tanımlanır.
 Sınıf, bu paket içinde yer alacak şekilde tanımlanır.
 Diğer sınıflar, import anahtar kelimesi ile bu sınıflara erişir.
 
-![alt text](image-149.png)
+![alt text](images/images/image-51.png)
 
 3️⃣ Default Package nedir?
 Default package, sınıfın herhangi bir paket belirtilmeden tanımlandığı pakettir. Genellikle küçük projelerde kullanılır, ancak büyük projelerde paketler kullanılarak düzen sağlanması önerilir.
@@ -88,7 +88,7 @@ Default package, sınıfın herhangi bir paket belirtilmeden tanımlandığı pa
 4️⃣ Bir sınıf başka bir paketten nasıl erişilir?
 Başka bir paketten sınıfa erişebilmek için, import anahtar kelimesi kullanılır.
 
-![alt text](image-150.png)
+![alt text](images/image-52.png)
 
 ### **5️⃣ Paketlerin faydaları nelerdir?**
 

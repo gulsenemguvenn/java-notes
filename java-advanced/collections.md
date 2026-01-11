@@ -43,7 +43,7 @@ List arayüzü, verilerin sıralı bir şekilde tutulduğu ve tekrarlanan öğel
 
 **Örnek Kullanım:**
 
-![alt text](images/image-6.png)
+![alt text](images/image.png)
 
 ---
 
@@ -61,7 +61,7 @@ Set arayüzü, öğelerin yalnızca bir kez bulunduğu ve sırasının önemli o
 
 **Örnek Kullanım:**
 
-![alt text](images/image-7.png)
+![alt text](images/image-1.png)
 
 ---
 
@@ -78,7 +78,7 @@ Queue arayüzü, verilerin FIFO (First In, First Out) sırasıyla işlendiği ko
 
 **Örnek Kullanım:**
 
-![alt text](images/image-8.png)
+![alt text](images/image-2.png)
 
 ---
 
@@ -97,7 +97,7 @@ Map arayüzü, anahtar-değer çiftlerini saklar. Her anahtar yalnızca bir değ
 
 **Örnek Kullanım:**
 
-![alt text](images/image-9.png)
+![alt text](images/image-3.png)
 
 ---
 
@@ -162,20 +162,20 @@ Koleksiyonlar arkada bir diziyi yönetirler.
 
 ## ArrayList
 
-![alt text](images/image-10.png)
+![alt text](images/image-158.png)
 
 ArrayListin elemanlarına ulaşabilmem için obje olarak tutmam gerekiyor.
 
-![alt text](images/image-11.png)
+![alt text](images/image-159.png)
 
 ## Type-Safe ArrayList
 (ArrayList’i tip güvenli hale getirme)
 
-![alt text](images/image-12.png)
+![alt text](images/image-160.png)
 
 ## HashMap
 
-![alt text](images/image-13.png)
+![alt text](images/image-161.png)
 
 
 # Collection Framework
@@ -213,7 +213,7 @@ En yaygın List implementasyonları: ArrayList, LinkedList
 
 ArrayList Örneği:
 
-![alt text](images/image-151.png)
+![alt text](images/image-4.png)
 
 **Önemli Noktalar:**
 - **ArrayList** dinamik bir dizidir ve sıralıdır. Elemanlara indeksle erişilebilir.
@@ -228,7 +228,7 @@ HashSet (sırasız), LinkedHashSet (eklenme sırasına göre sıralı), TreeSet 
 
 HashSet Örneği:
 
-![alt text](images/image-152.png)
+![alt text](images/image-5.png)
 
 **Önemli Noktalar:**
 - **HashSet** sırasızdır, ancak öğelerin tekrarı kabul edilmez.
@@ -244,7 +244,7 @@ PriorityQueue ve LinkedList gibi implementasyonlar vardır.
 
 PriorityQueue Örneği:
 
-![alt text](images/image-153.png)
+![alt text](images/image-6.png)
 
 **Önemli Noktalar:**
 - **PriorityQueue**, öğeleri doğal sıralama ya da belirtilen sıralama düzenine göre sıralar.
@@ -259,7 +259,7 @@ HashMap, LinkedHashMap, TreeMap gibi implementasyonlar vardır.
 
 HashMap Örneği:
 
-![alt text](images/image-154.png)
+![alt text](images/image-7.png)
 
 **Önemli Noktalar:**
 - **HashMap** anahtarları sırasız olarak tutar.
@@ -267,6 +267,16 @@ HashMap Örneği:
 - **TreeMap** anahtarları doğal sıralama ya da bir Comparator kullanarak sıralar.
 
 ---
+
+**📌 Özet**
+Java koleksiyon çerçevesi, veri yapıları üzerinde işlem yapmayı kolaylaştırır.
+**List, Set, Queue, Map** Java koleksiyonlarının temel yapı taşlarıdır.
+Her koleksiyon türü farklı ihtiyaçlara hizmet eder; örneğin, **List** sıralı veriler için, **Set** tekrarsız veriler için uygundur.
+**Map** anahtar-değer çiftleri ile çalışır**, Queue** ise FIFO sırasını takip eder.
+
+Collections framework hiyerarşik interface ve sınıflardan oluşan Java programlama dilinde obje gruplarını yönetmeye yarayan kısımdır.
+
+Collections framework obje gruplarını yönetme işlemini yaparken birtakım kriterleri göz önünde bulundurmaktadır. Bunlardan birinci yüksek performans hedefidir. Collections framework tuttuğu veriler üzerinde işlem yaparken bunu oldukça yüksek performansla sunar, performans sorunlarından ötürü bir collection ı yeniden implemente etme ihtiyacı çok çok nadir karşılaşılan bir durumdur. Bir diğer önemli kriter ise collectionlara getirdiği standarttır. Ayrıca collections framework genişlemeye uygun olarak tasarlanmıştır. Yani içerisindeki bütün collectionlar interfacelere dayanır, eğer özel ihtiyaçlardan dolayı yeni bir collection yazma ihtiyacı ortaya çıkarsa bunu yapmak çok kolaydır.
 
 ## 📌 Mülakat Soruları ve Cevapları
 
@@ -293,22 +303,22 @@ HashMap, LinkedHashMap, TreeMap gibi implementasyonları vardır.
 
 ## 📌 Collection Hiyerarşisi
 
-![alt text](images/image-155.png)
+![alt text](images/image-8.png)
 
 ---
 
 ### ArrayList
 
-![alt text](images/image-156.png)
+![alt text](images/image-9.png)
 
 ### LinkedList
 
-![alt text](images/image-157.png)
+![alt text](images/image-10.png)
 
 ### HashSet
 
-![alt text](images/image-158.png)
+![alt text](images/image-11.png)
 
 Çıktı:
 
-Popping the stack: F E D B A
+[D, E, F, A, B, C]

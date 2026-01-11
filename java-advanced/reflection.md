@@ -14,7 +14,7 @@ Java'da bir sınıfı yansıtmada kullanılan temel sınıf `Class`’tır. `Cla
 
 📌 Örnek:
 
-![alt text](image-92.png)
+![alt text](images/image-44.png)
 
 ✅ **Önemli Nokta:** `Class.forName("ClassName")` ile sınıfın `Class` nesnesine erişebilirsiniz. Bu, sınıfın tam adını vererek gerçekleştirilir.
 
@@ -26,7 +26,7 @@ Bir sınıfın alanlarını yansıtmak için `getDeclaredFields()` metodu kullan
 
 📌 Örnek:
 
-![alt text](image-93.png)
+![alt text](images/image-45.png)
 
 ✅ **Önemli Nokta:** `setAccessible(true)` ile private alanlara erişilebilirlik sağlanabilir.
 
@@ -38,7 +38,7 @@ Bir sınıfın metodlarını yansıtmak için `getDeclaredMethods()` veya `getMe
 
 📌 Örnek:
 
-![alt text](image-94.png)
+![alt text](images/image-46.png)
 
 ✅ **Önemli Nokta:** `invoke()` metodu, yansıtılan metodu çağırmak için kullanılır. Parametre gerektiren bir metod ise uygun parametrelerle çağrılmalıdır.
 
@@ -50,7 +50,7 @@ Constructorları yansıtmak için `getDeclaredConstructor()` metodu kullanılır
 
 📌 Örnek:
 
-![alt text](image-95.png)
+![alt text](images/image-47.png)
 
 ✅ **Önemli Nokta:** `newInstance()` metodu ile constructor çağrılabilir. `setAccessible(true)` ile private constructor'lara erişilebilirlik sağlanabilir.
 

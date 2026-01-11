@@ -17,7 +17,7 @@ Java'da Thread sınıfını genişleterek çoklu iş parçacıkları oluşturabi
 
 **Örnek:**
 
-![alt text](image-59.png)
+![alt text](images/image-12.png)
 
 Burada, `MyThread` sınıfı `Thread` sınıfını genişleterek `run()` metodunu override etmiştir. `start()` metodu çağrıldığında, Java bu iş parçacığını çalıştırır.
 
@@ -29,7 +29,7 @@ Bir başka yöntem ise `Runnable` arayüzünü implement etmektir. Bu yöntem, �
 
 **Örnek:**
 
-![alt text](image-60.png)
+![alt text](images/image-13.png)
 
 Bu yöntemde, `Runnable` arayüzünü implement eden bir sınıf tanımlarsınız ve sonra bu sınıfı bir `Thread` nesnesiyle başlatırsınız. `run()` metodunda, çalıştırılacak iş parçacığı kodu yer alır.
 
@@ -56,7 +56,7 @@ Bir metodun `synchronized` olarak işaretlenmesi, bu metodu sadece bir iş parç
 
 **Örnek:**
 
-![alt text](image-61.png)
+![alt text](images/image-14.png)
 
 Bu örnekte, `increment()` metodu `synchronized` olarak işaretlendiği için aynı anda sadece bir iş parçacığı bu metodu çalıştırabilir.
 
@@ -80,7 +80,7 @@ Java’da çok sayıda iş parçacığı oluşturmak ve yönetmek pahalı bir i�
 
 **Örnek:**
 
-![alt text](image-62.png)
+![alt text](images/image-15.png)
 
 Burada, iş parçacıkları havuzu kullanarak iş parçacıkları oluşturulur ve yönetilir.
 
@@ -118,9 +118,9 @@ Burada, iş parçacıkları havuzu kullanarak iş parçacıkları oluşturulur v
 
 *Runnable interface
 
-![alt text](image-63.png)  
-![alt text](image-64.png)  
-![alt text](image-65.png)
+![alt text](images/image-16.png)
+![alt text](images/image-17.png) 
+![alt text](images/image-18.png)
 
 ---
 
@@ -142,17 +142,17 @@ Her bir process en az bir tane thread içermek zorundadır, bu threade **main th
 
 Java'da multithread kavramı Thread sınıfı ve Runnable interface üzerine kurulmuştur. Yeni bir thread yaratmak ve ona bir görev atamak için bu iki sınıfı kullanabiliriz; birinci yöntemde doğrudan Thread sınıfını extend edip run metodunu override edebiliriz böylece yeni bir thread sınıfı yaratmış oluruz ve onun objelerini yaratarak doğrudan thread yaratmış ve çalıştırmış oluruz. İkinci yöntemde ise Runnable sınıfını implemente eder ve run metodunu override ederek yeni bir task oluştururuz ve bu oluşturduğumuz taskı bir thread objesine verip çalıştırmasını isteriz.
 
-![alt text](image-66.png)
+![alt text](images/image-19.png)
 
 `run()` metodu oluşturacağımız thread çalıştığı zaman çağrılacak olup, bu metodun uygulama içindeki diğer metodlardan hiçbir farkı yoktur. Sadece farklı bir thread tarafından çalıştırılır.
 
 Bu noktaya kadar sadece thread in nasıl çalışacağını tanımlamış olduk, henüz thread i yaratmadık. Thread i yaratmak için aşağıda gösterildiği gibi new ile yeni bir thread objesi yaratmamız gerekir.
 
-![alt text](image-67.png)
+![alt text](images/image-20.png)
 
 Artık gerçek bir thread objemiz var, fakat bu sadece thread objesinin yaratılma kısmı, bu thread biz `start()` metodunu çağırana kadar çalışmayacaktır. Şimdi bu noktaya kadar gördüklerimizi bir örnekle kod üzerinde inceleyelim.
 
-![alt text](image-69.png)
+![alt text](images/image-21.png)
 
 **Output :**
 
@@ -177,7 +177,7 @@ Bir uygulama o uygulama tarafından yaratılan bütün threadler son bulduğunda
 
 Bu örnekte MultiThreadDemo1 sınıfının bir name değişkeni tuttuğunu, ve MultiThreadDemo1 sınıfından bir obje oluşturup bu objeyi oluşturacağımız Thread tipinde objeye input olarak verdiğimizi görüyoruz. Bu Runnable interface i kullanarak yaptığımız örnekti, şimdi bir de aynı örneği Thread sınıfını extend ederek ve daha fazla thread yaratarak oluşturalım.
 
-![alt text](image-70.png)
+![alt text](images/image-22.png)
 
 **Output :**
 
@@ -234,7 +234,7 @@ Birincisi main threadin uzunca bir süre, child threadlerin çalışma süresini
 
 İkinci yöntem ise her bir threadin `isAlive()` metodunu çağırarak threadlerin çalışma durumunu bir döngü ile takip etmek ve bu süre zarfında main threadi sürekli uyutmak. `isAlive()` metodu söz konusu thread çalıştığı sürece true döner ve thread son bulduğu zaman dönüş değeri false değerini alır. Örneği inceleyelim;
 
-![alt text](image-71.png)
+![alt text](images/image-23.png)
 
 **Output:**
 
@@ -281,7 +281,7 @@ com.gulsenem.Main thread is terminating
 
 Üçüncü ve en verimli yöntem ise `join()` metodunun kullanımıdır. `join()` metodu child threadleri yaratan thread tarafından çağrılır ve isminden de anlaşılacağı gibi child threadlerin işlerini bitirip tekrar main threade katılmalarını söyler. Böylece `sleep()` metodunu kullanmaya gerek kalmaz ve işi biten child thread main threadi bunun hakkında bilgilendirir. Şimdi thread join metodunun nasıl kullanıldığını örnekle görelim;
 
-![alt text](image-72.png)
+![alt text](images/image-24.png)
 
 **Output :**
 
@@ -339,7 +339,7 @@ Her threadin bir öncelik değeri vardır, bu değer 1 ve 10 arasında değişir
 // TODO bu ornegı bırdaha ıncele statıc kullanmak ne kadar dogru
 
 
-![alt text](image-73.png)
+![alt text](images/image-25.png)
 
 **Output :**
 
@@ -419,7 +419,7 @@ Bu örnekte bir thread sınıfı yarattık ve threadin sıfırdan yüz milyona k
 
 `synchronized` ifadesi ile metodlara erişim kontrol altına alınabilir. Bir sınıftaki herhangi bir metod synchronized ifadesini aldığı zaman o metoda bir thread girdiğinde metodun bulunduğu obje otomatikman olarak lock mekanizması ile erişime kapatılır. Bu durumda başka bir thread o sınıf içindeki hiçbir synchronized metoda erişemez. synchronized metod üzerinde işlem yapan thread metoddan çıktığı zaman ise lock kaldırılır ve tüm obje yeniden erişilebilir hale gelir. Şimdi bu işlemin nasıl yapıldığını örnekle görelim;
 
-![alt text](image-74.png)
+![alt text](images/image-26.png)
 
 **Output :**
 
@@ -451,7 +451,7 @@ com.gulsenem.Main thread is finishing
 
 synchronized ifadesini kontrolü bizde olan metodlara uygulanabilir. Fakat herzaman bu mümkün olmayabilir. Bazı durumlarda kontrolü bizde olmayan yani başkası tarafından yazılmış metodları synchronized olarak çağırmamız gerekebilir. Böyle durumlarda synchronized blok yardımımıza yetişiyor. synchronized metod örneğini şimdi bir de synchronized blok ile yapalım;
 
-![alt text](image-75.png)
+![alt text](images/image-27.png)
 
 **Output :**
 
@@ -485,8 +485,8 @@ Bazı durumlarda birden fazla thread tarafından paylaşılan obje geçici olara
 
 Bu durumu basit bir tick tock uygulaması yaparak yakından görelim;
 
-![alt text](image-76.png)  
-![alt text](image-77.png)
+![alt text](images/image-28.png) 
+![alt text](images/image-29.png)
 
 **Output :**
 

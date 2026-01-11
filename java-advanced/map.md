@@ -31,7 +31,7 @@ Her birinin farklı özellikleri ve kullanım alanları vardır.
 
 📌 Örnek: HashMap Kullanımı
 
-![alt text](images/image-96.png)
+![alt text](images/image-81.png)
 
 **Önemli Noktalar:**
 - **HashMap**, sırasızdır; yani, elemanların eklenme sırası garanti edilmez.
@@ -47,7 +47,7 @@ Null anahtarına izin vermez, ancak null değerler kullanılabilir.
 
 📌 Örnek: TreeMap Kullanımı
 
-![alt text](images/image-97.png)
+![alt text](images/image-82.png)
 
 **Önemli Noktalar:**
 - **TreeMap** anahtarları **sıralar** (doğal sıralama veya Comparator ile).
@@ -63,7 +63,7 @@ Null anahtar ve değer kullanımına izin verir.
 
 📌 Örnek: LinkedHashMap Kullanımı
 
-![alt text](images/image-98.png)
+![alt text](images/image-83.png)
 
 **Önemli Noktalar:**
 - LinkedHashMap, eklenme sırasını korur.
@@ -78,7 +78,7 @@ Null anahtar ve null değer kullanılamaz.
 
 📌 Örnek: Hashtable Kullanımı
 
-![alt text](images/image-99.png)
+![alt text](images/image-84.png)
 
 **Önemli Noktalar:**
 - Hashtable, eşzamanlılık sağlar, yani çoklu iş parçacıkları (thread) aynı anda güvenli şekilde erişebilir.
@@ -93,7 +93,7 @@ ConcurrentHashMap'te veriler birden fazla iş parçacığı (thread) tarafından
 
 📌 Örnek: ConcurrentHashMap Kullanımı
 
-![alt text](images/image-100.png)
+![alt text](images/image-85.png)
 
 **Önemli Noktalar:**
 - ConcurrentHashMap, yüksek eşzamanlı erişim için optimize edilmiştir.
@@ -119,11 +119,11 @@ Map interface’i key-value çiftlerini tutmaya yarayan sınıfların üretilmes
 
 HashMap sınıfı ise kendisine gelen key-value çiftlerden key değerinin hash code’unu hesaplar ve bu hash code’a karşılık gelen indekste key-value çiftini saklar. Çalışma yapısı:
 
-![alt text](images/image-101.png)
+![alt text](images/image-86.png)
 
 Hash collision durumu:
 
-![alt text](images/image-102.png)
+![alt text](images/image-87.png)
 
 📌 Örnek çıktı:
 Ralph Smith: -19.08
@@ -142,7 +142,7 @@ LinkedHashMap eklenme sırasını korur.
 
 ## **Collection’dan Stream Yaratma**
 
-![alt text](images/image-103.png)
+![alt text](images/image-88.png)
 
 ---
 
@@ -150,7 +150,7 @@ LinkedHashMap eklenme sırasını korur.
 
 Varsayılan sıralama:
 
-![alt text](images/image-104.png)
+![alt text](images/image-89.png)
 
 Çıktı:
 [Audi, BMW, Mercedes, Skoda, Wolksvagen]
@@ -158,7 +158,7 @@ Varsayılan sıralama:
 
 Ters sıralama:
 
-![alt text](images/image-105.png)
+![alt text](images/image-90.png)
 
 Çıktı:
 [Wolksvagen, Skoda, Mercedes, BMW, Audi]
@@ -166,7 +166,7 @@ Ters sıralama:
 
 Özel Comparator:
 
-![alt text](images/image-106.png)
+![alt text](images/image-91.png)
 
 Comparator vs Comparable  
 Comparator chain()

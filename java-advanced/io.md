@@ -31,7 +31,7 @@ Byte stream sınıfları, byte verileri işlemek için kullanılır ve tüm veri
 
 📌 Örnek (FileInputStream ve FileOutputStream):
 
-![alt text](image-107.png)
+![alt text](images/image-98.png)
 
 **Önemli Noktalar:**
 
@@ -54,7 +54,7 @@ Character stream, sadece `char` türündeki veriler üzerinde işlem yapar ve ge
 
 📌 Örnek (FileReader ve FileWriter):
 
-![alt text](image-108.png)
+![alt text](images/image-99.png)
 
 **Önemli Noktalar:**
 
@@ -81,11 +81,11 @@ Java'da **Serialization (Serileştirme)**, nesnelerin bir byte akışına dönü
 
 📌 Serialization Örneği:
 
-![alt text](image-109.png)
+![alt text](images/image-100.png)
 
 📌 Deserialization Örneği:
 
-![alt text](image-110.png)
+![alt text](images/image-101.png)
 
 **Önemli Noktalar:**
 

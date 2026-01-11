@@ -9,7 +9,7 @@ Bir değişkeni final olarak tanımladığınızda, o değişkenin değeri yaln�
 
 **Örnek:**
 
-![alt text](images/image-54.png)
+![alt text](images/image-102.png)
 
 **Önemli Nokta:** final değişkenler, yalnızca ilk atama sırasında değer alabilirler. Değer bir kez atandıktan sonra değiştirilmesi mümkün değildir.
 
@@ -20,7 +20,7 @@ Bir metodu final olarak tanımladığınızda, o metodun alt sınıflar tarafın
 
 **Örnek:**
 
-![alt text](images/image-55.png)
+![alt text](images/image-103.png)
 
 **Önemli Nokta:** final metodlar, alt sınıflar tarafından değiştirilemez ve her zaman kendi sınıfındaki davranışını devam ettirir.
 
@@ -31,7 +31,7 @@ Bir sınıfı final olarak tanımladığınızda, o sınıfın başka bir sını
 
 **Örnek:**
 
-![alt text](images/image-56.png)
+![alt text](images/image-104.png)
 
 **Önemli Nokta:** final sınıflar, miras alınamaz, bu yüzden onları değiştirmek için alt sınıflar kullanılamaz.
 
@@ -42,7 +42,7 @@ Bir metodun parametrelerini final olarak tanımladığınızda, bu parametreleri
 
 **Örnek:**
 
-![alt text](images/image-57.png)
+![alt text](images/image-105.png)
 
 **Önemli Nokta:** final parametreler, metodun içinde yeniden atanamazlar, fakat parametrelerin kullanılması mümkündür.
 
@@ -53,7 +53,7 @@ Bir nesne final olarak tanımlandığında, nesnenin referansı değiştirilemez
 
 **Örnek:**
 
-![alt text](images/image-58.png)
+![alt text](images/image-106.png)
 
 **Önemli Nokta:** final anahtar kelimesi, nesnenin referansını değiştiremez, ancak nesnenin içeriği üzerinde işlem yapılabilir.
 
@@ -122,18 +122,18 @@ public final int SAYI ; → Bir değişken büyük harflerle tanımlanmışsa fi
 
 ikincisi ise constractırında değer atayabilriz;
 
-![alt text](images/image-49.png)
+![alt text](images/image-120.png)
 
 Bir metodun parameteresini final olarak tanımlarsak değişkenin değeride değiştirilemez.
 
 Final olarak tanımlanan metot parametrelerinin değeride sonradan değiştirilemez.
 
-![alt text](images/image-50.png)  
-![alt text](images/image-51.png)
+![alt text](images/image-121.png)
+![alt text](images/image-122.png)
 
 Bir metodu final olarak tanımlama:
 
-![alt text](images/image-52.png)
+![alt text](images/image-123.png)
 
 Kullanıcı sınıfı BaseClassı miras aldığı için baseclass içindeki test metodu @override edebiliyor.(final kullanmazsam)
 
@@ -143,4 +143,4 @@ Bir sınıfı final anahtar kelimesiyle tanımlamak:
 
 Bir sınıf final anahtar kelimesiyle tanımlandığı zaman bu classı kimse miras alamaz.
 
-![alt text](images/image-53.png)
+![alt text](images/image-124.png)
