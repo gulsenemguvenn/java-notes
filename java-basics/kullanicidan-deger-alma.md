@@ -41,7 +41,21 @@ nextInt() → Integer veri tipi için
 
 nextDouble() → Double veri tipi için
 
-![alt text](images/image-37.png)
+public class KullaniciGirdisi {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // String değer alma
+        System.out.print("Adınızı girin: ");
+        String isim = scanner.nextLine();
+        System.out.println("Merhaba, " + isim + "!");
+        
+        // int değer alma
+        System.out.print("Yaşınızı girin: ");
+        int yas = scanner.nextInt();
+        System.out.println("Yaşınız: " + yas);
+    }
+}
 
 ---
 
@@ -50,7 +64,7 @@ nextDouble() → Double veri tipi için
 Program sonlandığında Scanner nesnesinin kapatılması önerilir.
 Bu, bellek yönetimini iyileştirir.
 
-![alt text](images/image-38.png)
+scanner.close();
 
 ---
 

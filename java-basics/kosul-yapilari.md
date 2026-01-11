@@ -47,11 +47,28 @@ Belirtilen şart true ise, if bloğu çalıştırılır
 
 Aksi takdirde, else bloğu çalıştırılır
 
-![alt text](images/image-108.png)
+import java.util.Scanner;
 
-![alt text](images/image-109.png)
+public class FundamentalsDemo3 {
 
-![alt text](images/image-110.png)
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your age : ");
+        int age = scanner.nextInt();
+        System.out.println("Your availability for driving licence : " + isEligibleToHaveADrivingLicence(age));
+    }
+
+    public static boolean isEligibleToHaveADrivingLicence(int age) {
+
+        if(age < 18) {
+            System.out.println("It's too early to drive !!!");
+            return false;
+        }
+
+        return true;
+    }
+}
 
 📤 Output
 
@@ -67,7 +84,23 @@ else ifadesi ise if koşulu gerçekleşmemesi durumda,
 yani if ifadesi içinde yer alan koşul false dönmesi durumunda,
 program akışının gideceği yönü belirlemeye yarar.
 
-![alt text](images/image-111.png)
+import java.util.Scanner;
+
+public class FundamentalsDemo4 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("What is the time : ");
+        int time = scanner.nextInt();
+
+        if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        }
+    }
+}
 
 📤 Output
 What is the time : 19
@@ -79,7 +112,26 @@ if-else-if ifadesi, if koşulu gerçekleşmediği taktirde
 ikinci bir koşulu test etmeye yarar.
 Örneğin;
 
-![alt text](images/image-112.png)
+import java.util.Scanner;
+
+public class FundamentalsDemo5 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("What is the temperature today : ");
+
+        int temperature = scanner.nextInt();
+
+        if (temperature < 20) {
+            System.out.println("A little bit cold.");
+        } else if (temperature < 25) {
+            System.out.println("It's cool.");
+        } else {
+            System.out.println("It's warm, drink water.");
+        }
+    }
+}
 
 📤 Output
 
@@ -101,8 +153,6 @@ ancak daha fazla alternatif durumu kontrol etmek için switch yapısı kullanıl
 
 switch ifadenin sonucu birden fazla case ile karşılaştırılır.
 
-![alt text](images/image-113.png)
-
 break komutu: case bloğundan çıkmak için kullanılır.
 Eğer break kullanılmazsa, bir sonraki case bloğu çalışır
 (bu duruma fall-through denir).
@@ -115,7 +165,53 @@ switch ifadesi kullanılabilir.
 Bu değer byte, short, int, char ya da String tipinde olabilir.
 Örneğin;
 
-![alt text](images/image-114.png)
+import java.util.Scanner;
+
+public class FundamentalsDemo6 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of the day : ");
+
+        int numberOfTheDay = scanner.nextInt();
+
+        System.out.println("Today is " + getDayNameOfWeek(numberOfTheDay));
+    }
+
+    public static String getDayNameOfWeek(int dayOfTheWeek) {
+
+        String nameOfTheDay;
+
+        switch (dayOfTheWeek) {
+            case 1:
+                nameOfTheDay = "Monday";
+                break;
+            case 2:
+                nameOfTheDay = "Tuesday";
+                break;
+            case 3:
+                nameOfTheDay = "Wednesday";
+                break;
+            case 4:
+                nameOfTheDay = "Thursday";
+                break;
+            case 5:
+                nameOfTheDay = "Friday";
+                break;
+            case 6:
+                nameOfTheDay = "Saturday";
+                break;
+            case 7:
+                nameOfTheDay = "Sunday";
+                break;
+            default:
+                nameOfTheDay = "Unknown";
+        }
+
+        return nameOfTheDay;
+    }
+}
 
 📤 Output
 
@@ -136,7 +232,52 @@ switch ifadesi bizim için birden fazla koşuldan
 herhangi birinin gerçekleşmesi durumunda
 aynı kod akışının işletilmesine olanak sağlar.
 
-![alt text](images/image-115.png)
+import java.util.Scanner;
+
+public class FundamentalsDemo7 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Year : ");
+
+        int year = scanner.nextInt();
+        System.out.print("Month : ");
+
+        int month = scanner.nextInt();
+
+        System.out.println("Number of Days = " + getNumberOfDays(year, month));
+    }
+
+    public static int getNumberOfDays(int year, int month) {
+        int numDays = 0;
+
+        switch (month) {
+            case 1: case 3: case 5:
+            case 7: case 8: case 10:
+            case 12:
+                numDays = 31;
+                break;
+            case 4: case 6:
+            case 9: case 11:
+                numDays = 30;
+                break;
+            case 2:
+                if (((year % 4 == 0) &&
+                        !(year % 100 == 0))
+                        || (year % 400 == 0))
+                    numDays = 29;
+                else
+                    numDays = 28;
+                break;
+            default:
+                System.out.println("Invalid month.");
+                break;
+        }
+
+        return numDays;
+    }
+}
 
 📤 Output
 

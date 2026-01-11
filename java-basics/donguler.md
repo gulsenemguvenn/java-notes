@@ -43,7 +43,9 @@ Döngünün her adımı tamamlanınca i değeri 1 artırılmıştır.
 
 ### Örnek 
 
-![alt text](images/image-118.png)
+ for(int i = 0, j = 10; i < j; i++, j--) {
+        System.out.println("i and j :" + i + " " + j);
+    }
 
 ### 📤 Output
 
@@ -61,7 +63,10 @@ ve i j'den küçük olduğu sürece döngünün tekrarlanması sağlanmıştır.
 
 ### Örnek 
 
-![alt text](images/image-119.png)
+  int i = 0;
+    for(; i < 5;) {
+        System.out.println("i :" + i++);
+    }
 
 ### 📤 Output
 
@@ -85,12 +90,18 @@ ama hangi koşul devam ettiği sürece tekrar edeceğinin bilindiği durumlarda 
 
 Genel yapısı aşağıdaki gibidir:
 
-![alt text](images/image-120.png)
+while (koşul) {
+    // Döngü içindeki kod bloğu
+}
 
 Condition ifadesi döngünün hangi şartlar altında devam edeceğine karar verilen kısımdır.
 Condition true olduğu sürece döngü tekrar eder.
 
-![alt text](images/image-121.png)
+   int i = 0;
+    while (i < 5) {
+      System.out.println(i);
+      i++;
+    }
 
 while döngüsü çalışmaya condition ifadesinin sonucunu kontrol ederek başlar.
 Her adımda condition kontrol edilir.
@@ -103,7 +114,10 @@ while döngüsünün özel bir şeklidir.
 
 Bu nedenle do-while döngüsünde döngünün en az bir kere çalışması garantidir.
 
-![alt text](images/image-122.png)
+  int i = 5;
+    do {
+        System.out.println("Iteration: "+ ++i);
+    } while(i < 5);
 
 📤 Output
 
@@ -119,7 +133,13 @@ döngü içerisinde karar vermek gerekebilir.
 🔸 break
 
 break ifadesi döngüyü tamamen sonlandırmaya yarar.
-![alt text](images/image-123.png)
+
+  for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+        break;
+      }
+      System.out.println(i);
+    }
 
 📤 Output
 
@@ -131,6 +151,15 @@ break ifadesi döngüyü tamamen sonlandırmaya yarar.
 Bu örnekte döngünün normalde 10 adımda sonlanması gerekirken,
 i değeri 4 olduğunda break ile döngü sonlandırılmıştır.
 
+   while (true) {
+        char ch = (char) System.in.read();
+        if (ch == 'q') {
+            break;
+        }
+    
+        System.out.println(ch);
+    }
+
 break ifadesi for, while ve do-while döngülerinde kullanılabilir.
 
 🔸 continue
@@ -139,9 +168,12 @@ Bazı durumlarda döngü adımının pas geçilmesi istenebilir.
 continue ifadesi, kendisinden sonra gelen kodu çalıştırmadan
 bir sonraki iterasyona geçilmesini sağlar.
 
-![alt text](images/image-124.png)
-
-![alt text](images/image-125.png)
+for (int i = 0; i < 100; i++) {
+        if (i % 10 != 0) {
+            continue;
+        }
+        System.out.println("I : " + i);
+    }
 
 Output :
 
@@ -166,22 +198,86 @@ ve sadece 10’un katları konsola yazdırılmıştır.
 Bu bölümde kullanıcıdan alınan yükseklik bilgisine göre
 ekrana bir piramid çizdirilmesi beklenmektedir.
 
-![alt text](images/image-126.png)
+Enter the height of pyramid : 
+4
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
 
-![alt text](images/image-127.png)
+import java.util.Scanner;
+
+public class NestedLoops {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the height of pyramid : ");
+        int height = sc.nextInt();
+
+        int stars = 1;
+
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j <  (height * 2 - stars) / 2; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < stars ; j++) {
+                System.out.print("*");
+            }
+
+            stars += 2;
+            System.out.println();
+        }
+
+        stars -= 4;
+        for (int i = height - 1; i > 0 ; i--) {
+
+            for (int j = 0; j < (height * 2 - stars) / 2; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+
+            stars -= 2;
+            System.out.println();
+        }
+    }
+}
 
 ##🔹Do-While Döngüsü
 
 do-while döngüsü, while döngüsüne benzer, ancak koşul döngü tamamlandıktan sonra kontrol edilir. Bu yüzden, döngü en az bir kez çalışır.
 
-![alt text](images/image-128.png)
+do {
+    // Döngü içindeki kod bloğu
+} while (koşul);
+
+int i = 1;
+do {
+    System.out.println(i);  // 1'den 5'e kadar olan sayıları yazdırır
+    i++;
+} while (i <= 5);
 
 ##🔹 for-each Döngüsü (Enhanced for loop)
 
 Dizi veya koleksiyonlar üzerinde döngü yapmayı kolaylaştıran bir yapıdır.
 Özellikle diziler ve koleksiyonlar ile çalışırken kullanılır.
 
- ![alt text](images/image-129.png)
+for (eleman_tipi eleman : koleksiyon) {
+    // Döngü içindeki kod bloğu
+}
+
+int[] sayilar = {1, 2, 3, 4, 5};
+for (int sayi : sayilar) {
+    System.out.println(sayi);  // Dizideki her bir sayıyı yazdırır
+}
 
  ---
 
@@ -194,14 +290,24 @@ Döngüler içinde döngü kontrolünü yönetmek için kullanılan komutlar:
 Açıklama:
 Döngüyü hemen sonlandırmak için kullanılır.
 
-![alt text](images/image-130.png)
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        break;  // i 3 olduğunda döngüden çıkılır
+    }
+    System.out.println(i);  // 1 ve 2'yi yazdırır
+}
 
 2️⃣ continue
 
 Açıklama:
 Döngüdeki bir iterasyonu atlamak için kullanılır.
 
-![alt text](images/image-131.png)
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue;  // i 3 olduğunda bu iterasyonu atlar
+    }
+    System.out.println(i);  // 1, 2, 4, 5'i yazdırır
+}
 
 ---
 
